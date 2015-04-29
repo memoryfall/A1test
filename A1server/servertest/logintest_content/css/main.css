@@ -1,0 +1,65 @@
+.t_btn1
+{
+	background-image:url('myImg/t_del.png');
+}
+.loginBg
+{
+	background-image:url('myImg/bg1.png');
+}
+.b-bla-L2{
+	border-color:rgba(0, 0, 0, .2);
+}
+.us-L2 {
+	-webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, .3);
+	box-shadow: 0 1px 1px rgba(255, 255, 255, .3)
+}
+.b-gra3{
+	border-color:#d8d8d8;
+}
+.uinn-a4{
+	padding:0.9em 0.625em 0.8125em 0.625em;
+}
+.t-gra2{
+	color:#d8d8d8;
+}
+.userImg{
+	background-image:url('images/userImg.png');
+}
+.pwdImg{
+	background-image:url('images/pwdImg.png');
+}
+.emailImg{
+	background-image:url('images/emailImg.png');
+}
+.mar-ar2{
+	margin-right:0.375em;
+}
+.uinn-a5{
+	padding:0.8125em 0.625em 0.9em 0.625em;
+}
+.uinn-a6{
+	padding:1em 0.65em 0 0.65em;
+}
+.uinn-at2{
+	padding-top:0.75em;
+}
+.uinn-at1{
+    padding-top:1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
