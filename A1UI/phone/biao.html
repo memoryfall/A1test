@@ -15,13 +15,37 @@
         <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
             <!--header开始-->
             <div id="header" class="uh bc-text-head ub bc-head">
-                <div class="nav-btn" id="nav-left">
-                    <div class="fa fa-angle-left fa-2x"></div>
+                <div class="ub ub-ver">
+                <div class="ub ub-hor">
+                    <div class="nav-btn" id="nav-left">
+                        <div class="fa fa-angle-left fa-2x"></div>
+                    </div>
+                    <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">订单利润</h1>
+                    <div class="nav-btn nav-bt" id="nav-right"></div>
                 </div>
-                <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">订单利润</h1>
-                <div class="nav-btn nav-bt" id="nav-right"></div>
+                <div class="ub ub-ver">
+                <div class="sc-bg-active uinput ub ub-f1  bc-border uba" style="border: solid;border-color: RGB(236,236,236);border-radius: 0.4em;">
+                    <div class="uinn fa fa-search sc-text"></div>
+                    <input placeholder="搜索订单单号/下单时间" type="text" class="ub-f1">
+                </div>
+                <div style="color: gray;font-size: small;width: 100%;">
+                    <table>
+                        <tr>
+                            <td style="text-align: left;">
+                            <input type="radio" class="radiobox umar-r uabs ub-con" name="radio" value="radio" />
+                            </td>
+                            <td>包含未付款订单</td>
+                            <td style="text-align: right;">
+                            <input type="radio" name="radio" value="radio" />
+                            </td>
+                            <td>包含未付款订单</td>
+                        </tr>
+                    </table>
+                </div></div></div>
             </div>
-            <!--header结束--><!--content开始-->
+            <!--header结束-->
+
+            <!--content开始-->
             <div id="content" class="ub-f1 tx-l">
 
             </div>
@@ -42,6 +66,5 @@
         appcan.button(".nav-btn", "btn-act", function() {
             appcan.window.close(-1);
         })
-
     </script>
 </html>
