@@ -15,10 +15,8 @@
         <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
             <!--header开始-->
             <div id="header" class="uh bc-text-head ub bc-head">
-                <div class="nav-btn" id="nav-left">
-                    <div class="fa fa-angle-left fa-2x"></div>
-                </div>
-                <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">登录界面</h1>
+                <div class="nav-btn" id="nav-left"></div>
+                <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">注册界面</h1>
                 <div class="nav-btn nav-bt" id="nav-right"></div>
             </div>
             <!--header结束--><!--content开始-->
@@ -34,7 +32,7 @@
     <script>
         appcan.ready(function() {
             var titHeight = $('#header').offset().height;
-            appcan.frame.open("content", "logintest_content.html", 0, titHeight);
+            appcan.frame.open("content", "rejist_content.html", 0, titHeight);
             window.onorientationchange = window.onresize = function() {
                 appcan.frame.resize("content", 0, titHeight);
             }

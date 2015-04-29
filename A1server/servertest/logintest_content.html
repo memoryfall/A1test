@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="ub ub-ver uinn">
-                        <div class="ub ub-pe uinn-a6 sc-text-active ulev-4">
+                        <div class="ub ub-pe uinn-a6 sc-text-active ulev-4" onclick="MissingPwd()">
                             忘记密码
                         </div>
                         <div class="uinn-at1">
@@ -41,10 +41,12 @@
                                 登录
                             </div>
                         </div>
+                        
                         <div class="uinn-at2 ub bc-text-head ulev-4">
-                            <div class="ub-f1">
+                            <div class="ub-f1" onclick="goToRejist()">
                                 立即注册
                             </div>
+                            
                             <div class="ub-f1 tx-r">
                                 无账号快捷登录
                             </div>
@@ -63,6 +65,7 @@
     <script>
         appcan.ready(function() {
             appcan.initBounce();
+            initNewUser();
         })
         appcan.button("#login", "ani-act", function() {
             Login();

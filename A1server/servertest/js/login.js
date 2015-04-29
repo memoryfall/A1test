@@ -19,3 +19,23 @@ function Login(){
         })
     }
 }
+
+function goToRejist(){
+    appcan.window.open({
+        name:'rejist',
+        data:'rejist.html',
+        aniId:2,
+    })
+}
+function initNewUser(){
+    // var newName=appcan.locStorage.val('NAME');
+    // var newPassword=appcan.locStorage.val('PASSWORD');
+   
+}
+function MissingPwd(){
+    appcan.window.open({
+        name:'password',
+        data:'password.html',
+        aniId:2
+    })
+}
