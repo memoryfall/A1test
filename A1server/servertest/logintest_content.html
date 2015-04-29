@@ -20,37 +20,33 @@
                         <div class="ub ub-ac ubb umh5 bc-border ">
                             <div class=" uinput ub ub-f1">
                                 <div class="uinn fa fa-user sc-text"></div>
-                                <input placeholder="手机/邮箱/用户名" type="text" class="ub-f1">
+                                <input placeholder="手机/邮箱/用户名" type="text" class="ub-f1" id="uid">
                             </div>
                         </div>
-                        <div class="ub ub-ac ubb umh5 bc-border ">
-                            <div class=" uinput ub ub-f1">
-                                <div class="uinn fa  fa-envelope-o sc-text"></div>
-                                <input placeholder="邮箱" type="text" class="umw4 ub-f1">
-
-                            </div>
-                        </div>
+                        
                         <div class="ub ub-ac umh5 bc-border ">
                             <div class=" uinput ub ub-f1">
                                 <div class="uinn fa fa-lock sc-text"></div>
-                                <input placeholder="密码" type="password" class="umw4 ub-f1">
+                                <input placeholder="密码" type="password" class="umw4 ub-f1" id="upwd">
 
                             </div>
                         </div>
                     </div>
                     <div class="ub ub-ver uinn">
-                        <div class="ub ub-pe uinn-a6 sc-text-active ulev-4">
+                        <div class="ub ub-pe uinn-a6 sc-text-active ulev-4" onclick="MissingPwd()">
                             忘记密码
                         </div>
                         <div class="uinn-at1">
-                            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn uc-a1" id="submit">
+                            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn uc-a1" id="login">
                                 登录
                             </div>
                         </div>
+                        
                         <div class="uinn-at2 ub bc-text-head ulev-4">
-                            <div class="ub-f1">
+                            <div class="ub-f1" onclick="goToRejist()">
                                 立即注册
                             </div>
+                            
                             <div class="ub-f1 tx-r">
                                 无账号快捷登录
                             </div>
@@ -64,29 +60,15 @@
         </div>
         <script src="js/appcan.js"></script>
         <script src="js/appcan.control.js"></script>
+        <script src="js/login.js"></script>
     </body>
     <script>
         appcan.ready(function() {
             appcan.initBounce();
+            initNewUser();
         })
-        appcan.button("#submit", "ani-act", function() {
-            $("form").submit();
+        appcan.button("#login", "ani-act", function() {
+            Login();
         })
-
-        $("form").on('submit', function() {
-            appcan.request.postForm($("form"), function() {
-                appcan.window.alert({
-                    title : "提醒",
-                    content : "您已经提交了表单:)",
-                    buttons : '确定',
-                    callback : function(err, data, dataType, optId) {
-                        console.log(err, data, dataType, optId);
-                    }
-                });
-            }, function(err) {
-
-            });
-            return false;
-        });
     </script>
 </html>
