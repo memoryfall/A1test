@@ -14,20 +14,14 @@
 .resuser {
     background-image: url('myImg/user.png');
 }
-.resqq {
-    background-image: url('myImg/qq.png');
+.logo {
+    background-image: url('myImg/logo.png');
 }
 .resweidian {
     background-image: url('myImg/weidian.png');
 }
-.resren {
-    background-image: url('myImg/renren.png');
-}
 .restaobao {
     background-image: url('myImg/taobao.png');
-}
-.resxinlang {
-    background-image: url('myImg/xinlang.png');
 }
 .umhw {
     min-height: 1em;
@@ -69,15 +63,6 @@
     padding: 0.8em 0.5em;
     margin: 0;
 }
-.respwd {
-    background-image: url('myImg/pwd.png');
-}
-.resuser {
-    background-image: url('myImg/user.png');
-}
-.logo {
-    background-image: url('myImg/logo.png');
-}
 .umhw {
     min-height: 1.5em;
     min-width: 1.5em;
@@ -91,10 +76,37 @@
     min-height: 1.5em;
     min-width: 9em;
 }
-.test{
+.test {
     display: inline-block;
     width: 220px;
     vertical-align: middle;
-text-align: center;
+    text-align: center;
 }
-
+.bg-image {
+    background-image: url('myImg/login.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+::-webkit-input-placeholder {/* WebKit browsers */
+    color: #FFFFFF;
+    font-size: small;
+    font-weight: bold;
+}
+:-moz-placeholder {/* Mozilla Firefox 4 to 18 */
+    color: #FFFFFF;
+    font-size: small;
+    font-weight: bold;
+    opacity: 1;
+}
+::-moz-placeholder {/* Mozilla Firefox 19+ */
+    color: #FFFFFF;
+    font-size: small;
+    font-weight: bold;
+    opacity: 1;
+}
+:-ms-input-placeholder {/* Internet Explorer 10+ */
+    color: #FFFFFF;
+    font-size: small;
+    font-weight: bold;
+}
