@@ -12,33 +12,30 @@
         <link rel="stylesheet" href="css/appcan.control.css">
     </head>
     <body class="um-vp bc-bg" style="background-color: #ECECEC;" ontouchstart>
-
         <div class="ub ub-hor ub-f1 ulev-1 uinn ub-ac c-gra1 txtcolor">
-            <div class="ub ub-ver ub-f1 ulev-1 uinn ub-ac c-gra1 txtcolor">
-                <div class="ub-f1 ub-con ub-ac ub-pc ub" style="text-align: left;font-size:small;">
+            <div class="ub-ver ub-f1">
+                <div style="font-size:small;">
                     成本
                 </div>
-                <div class="ub-f1 ub-con ub-ac ub-pc ub">
-                    <div style="color:red;font-size: 2em;">
-                        352.00
-                    </div>
+                <div class="ub-f1" style="text-align: center;color:red;font-size: 2em;">
+                    352.00
                 </div>
             </div>
-            <div class="ub ub-ver ub-f1 ulev-1 uinn ub-ac c-gra1 txtcolor">
-                <div class="ub-f1 ub-con ub-ac ub-pc ub" style="text-align: left;font-size:small;">
-                    毛利
-                </div>
-                <div class="ub-f1 ub-con ub-ac ub-pc ub">
-                    <div style="color:red;font-size: 2em;">
+            <div class="ub-ver ub-f1">
+                <div class="ub-ver ub-f1">
+                    <div style="font-size:small;">
+                        毛利
+                    </div>
+                    <div class="ub-f1" style="text-align: center;color:red;font-size: 2em;">
                         352.00
                     </div>
                 </div>
             </div>
         </div>
         <div id="divScroll" style="float:right"></div>
-        <table style="background-color: #FFFFFF;width:90%" border="1px" bordercolor="#ECECEC">
+        <table style="background-color: #FFFFFF;width:94%" border="1px" bordercolor="#ECECEC">
             <caption style="text-align: justify;color: gray;">
-                <span style="text-align: left;font-size: small;">订单号：12566894663</span>&nbsp;&nbsp;&nbsp;<span style="text-align: right;font-size: small;">2015.04.25 10:17:12</span>
+                <span style="text-align: left;font-size: small;">订单号：12566894663</span>&nbsp;<span style="text-align: right;font-size: small;">2015.04.25 10:17:12</span>
             </caption>
             <!--行标题-->
             <thead>
@@ -69,10 +66,10 @@
                 </tr>
             </tfoot>
         </table>
-    <script src="js/appcan.js"></script>
-    <script src="js/appcan.control.js"></script>
-    <script src="js/appcan.listview.js"></script>
-    <script src="js/Scrollbar.js" type="text/javascript"></script>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.listview.js"></script>
+        <script src="js/Scrollbar.js" type="text/javascript"></script>
     </body>
     <script>
         appcan.ready(function() {
@@ -82,54 +79,54 @@
 
         });
         var data = [];
-            //创建一万条示例数据
-            for (var i = 0; i < 10000; i++) {
-                var row = {
-                    id : i,
-                    version : "<span style='color:green;'>" + i + "</span>",
-                    name : "陕西高原红富士苹果…",
-                    text : "<span style='color:green;'>" + i + "</span><br/><span style='color:red;'>" + i + "</span>",
-                    data : "<span style='color:green;'>" + i + "</span><br/><span style='color:red;'>" + i + "</span>",
-                };
-                data.push(row);
-            }
-            //创建滚动条
-            var scrbar = new Scrollbar();
-            window.onload = function() {
-                scrbar.CreateAt("divScroll");
-                scrbar.setOptions({
-                    total : 10000,
-                    size : 100,
-
-                });
-                scrbar.onScroll = function(pos) {
-                    ShowData(pos);
-                }
-                //获取模板
-                var items = scrbar.getPageItems();
-                var tpl = document.getElementById("trTpl");
-                tpl.parentNode.removeChild(tpl);
-                //仅创建所看到的几十行表格，所以自然快得多
-                var list = document.getElementById("tblList");
-                for (var i = 0; i < data.length && i < items; i++) {
-                    var nr = tpl.cloneNode(true);
-                    //从模板行复制新行
-                    list.appendChild(nr);
-                }
-                ShowData(scrbar.getPos());
-            }
-            //根据滚动条，展示数据
-            function ShowData(pos) {
-                var n = scrbar.getPageItems();
-                var rows = document.getElementById("tblList").rows;
-                for (var i = 0; i < n; i++) {
-                    var row = rows[i];
-                    var item = data[i + pos];
-                    row.cells["tdVersion"].innerHTML = item["version"];
-                    row.cells["tdName"].innerHTML = item["name"];
-                    row.cells["tdText"].innerHTML = item["text"];
-                    row.cells["tdData"].innerHTML = item["data"];
-                }
+        //创建一万条示例数据
+        for (var i = 0; i < 10000; i++) {
+            var row = {
+                id : i,
+                version : "<span style='color:green;'>" + i + "</span>",
+                name : "陕西高原红富士苹果…",
+                text : "<span style='color:green;'>" + i + "</span><br/><span style='color:red;'>" + i + "</span>",
+                data : "<span style='color:green;'>" + i + "</span><br/><span style='color:red;'>" + i + "</span>",
             };
+            data.push(row);
+        }
+        //创建滚动条
+        var scrbar = new Scrollbar();
+        window.onload = function() {
+            scrbar.CreateAt("divScroll");
+            scrbar.setOptions({
+                total : 10000,
+                size : 100,
+
+            });
+            scrbar.onScroll = function(pos) {
+                ShowData(pos);
+            }
+            //获取模板
+            var items = scrbar.getPageItems();
+            var tpl = document.getElementById("trTpl");
+            tpl.parentNode.removeChild(tpl);
+            //仅创建所看到的几十行表格，所以自然快得多
+            var list = document.getElementById("tblList");
+            for (var i = 0; i < data.length && i < items; i++) {
+                var nr = tpl.cloneNode(true);
+                //从模板行复制新行
+                list.appendChild(nr);
+            }
+            ShowData(scrbar.getPos());
+        }
+        //根据滚动条，展示数据
+        function ShowData(pos) {
+            var n = scrbar.getPageItems();
+            var rows = document.getElementById("tblList").rows;
+            for (var i = 0; i < n; i++) {
+                var row = rows[i];
+                var item = data[i + pos];
+                row.cells["tdVersion"].innerHTML = item["version"];
+                row.cells["tdName"].innerHTML = item["name"];
+                row.cells["tdText"].innerHTML = item["text"];
+                row.cells["tdData"].innerHTML = item["data"];
+            }
+        };
     </script>
 </html>
