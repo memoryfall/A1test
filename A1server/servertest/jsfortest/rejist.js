@@ -10,7 +10,7 @@ function Rejist(){
     }else{
         appcan.request.ajax({
             type:'GET',
-            url:'http://192.168.100.139:8090/WebService1.asmx/insertUser',
+            url:'http://localhost:2137/WebService1.asmx/insertUser',
             data:{
                 name:newName,
                 password:newPassword,
