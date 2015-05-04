@@ -4,4 +4,6 @@ test
 新报表形式
 
 17:50 2015/4/29
-修改了报表页面
+A1UI_biao.html_修改了报表页面
+18:28 2015/5/4
+A1UI_biao_content.html_修改报表
