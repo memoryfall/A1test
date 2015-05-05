@@ -4,13 +4,13 @@ function Login(){
     if(userName==""||userPwd==""){
         alert("请将信息填写完整！");
     }else{
-        var url="http://192.168.100.139:8090/WebService1.asmx/Login";
-        appcan.request.getJSON(url,{name:userName,password:userPwd},function(data){
-            if(data.user[0]["status"]=="True"){
+        var url="http://localhost:2137/WebService1.asmx/Login";
+        appcan.request.getJSON(url,{name:userName,password:userPwd,status:0},function(data){
+            if(data.user[0]["status"]=="true"){
                 alert("登录成功！");
                 appcan.window.open({
-                    name:'main',
-                    data:'main.html',
+                    name:'maintest',
+                    data:'maintest.html',
                     aniId:2,
                 })
             }else{
