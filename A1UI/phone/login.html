@@ -29,7 +29,7 @@
                     </p>
                 </div>
             </div>
-            <form method="get" action="http://www.appcan.cn">
+            <form method="get" action="index.html">
                 <div class="umar-a" style="padding: 0.5em 0 0;">
                     <div class="ub ub-ac ubb umh5 bc-border uinput ub ub-f1">
                         <div class="resuser ub-img umhw1 umar-a"></div>
@@ -48,7 +48,7 @@
                 </div>
                 <button type="submit" class="uinvisible"></button>
             </form>
-            <div class="btn ub ub-ac bc-border bc-text-head ub-pc bc-bg uc-a1" style="color: #9F9F9F;font-size: normal;larger;font-weight: bold; border:solid;border-width:1px;border-radius:0.3em;border-color:#83BA41;" id="register">
+            <div class="metro re btn ub ub-ac bc-border bc-text-head ub-pc bc-bg uc-a1" style="color: #9F9F9F;font-size: normal;larger;font-weight: bold; border:solid;border-width:1px;border-radius:0.3em;border-color:#83BA41;" data-name="Register" data-url="register.html">
                 注册
             </div>
             <div class="uh ub" style="padding: 1em 0 0;">
@@ -69,7 +69,10 @@
     <script>
         appcan.ready(function() {
             appcan.initBounce();
-        })
+        });
+        appcan.button(".metro", "ani-act", function() {
+            appcan.window.open($(this).data("name"), $(this).data("url"), 10);
+        });
         appcan.button("#submit", "ani-act", function() {
             $("form").submit();
             appcan.window.open({
