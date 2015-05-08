@@ -1,1 +1,5 @@
 first commit test from lujian
+登录测试
+注册测试
+找回密码测试
+学习node.js与js开发知识

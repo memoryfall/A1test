@@ -87,9 +87,6 @@ input[type=radio]:checked+div.border-b {
     border-bottom: 2px solid #218dd5;
     color: #218dd5;
 }
-.uikj{
-    background-image:url('myImg/uikj.png') !important;
-}
 
 .apipicwh{
     width: 2.656em;
