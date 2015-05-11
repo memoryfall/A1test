@@ -12,14 +12,43 @@
         <link rel="stylesheet" href="../css/appcan.control.css">
     </head>
     <body class="um-vp bc-bg" ontouchstart>
-      店铺信息维护
+        <div class="sc-bg-active uinput ub ub-f1  bc-border uba" style="padding: .5em;">
+            <div class="uinn fa fa-search sc-text"></div>
+            <input placeholder="请输入搜索城市" type="text" class="ub-f1">
+        </div>
+        <div id="listview"  class="ubt bc-border sc-bg"></div><div id="listview"  class="ubt bc-border sc-bg"></div>
     </body>
     <script src="../js/appcan.js"></script>
     <script src="../js/appcan.control.js"></script>
+    <script src="../js/appcan.listview.js"></script>
     </body>
     <script>
         appcan.ready(function() {
         });
+        var lv = appcan.listview({
+            selector : "#listview",
+            type : "thickLine",
+            hasTouchEffect : true,
+            hasIcon : false,
+            hasAngle : false,
+            hasSubTitle : true,
+            hasId:true,
+            multiLine : 1,
+
+        });
+        lv.set([{
+            title : "卖卖东东的小店",
+            describe : "2595802",
+            subTitle : "天猫",
+            id : "1"
+        }, {
+            title : "卖卖东东的小店",
+            describe : "2595802",
+            subTitle : "天猫",
+            id : "2"
+        }])
+        lv.on("click", function(ele, obj, curEle) {
+        })
 
     </script>
 </html>
