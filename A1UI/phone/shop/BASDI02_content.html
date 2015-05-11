@@ -12,14 +12,39 @@
         <link rel="stylesheet" href="../css/appcan.control.css">
     </head>
     <body class="um-vp bc-bg" ontouchstart>
-       店员信息维护
+        <div id="listview"  class="ubt bc-border sc-bg"></div>
     </body>
     <script src="../js/appcan.js"></script>
     <script src="../js/appcan.control.js"></script>
+    <script src="../js/appcan.listview.js"></script>
     </body>
     <script>
         appcan.ready(function() {
         });
+
+        var lv = appcan.listview({
+            selector : "#listview",
+            type : "thickLine",
+            hasIcon : false,
+            hasAngle : false,
+            hasSubTitle : true,
+            multiLine : 1,
+        });
+        lv.set([{
+            title : "李小白",
+            describe : "WD259580208@digiwin.biz",
+            subTitle : "135-2563-2547",
+            subDescribe : "000",
+            id : "1"
+        }, {
+            title : "李小白",
+            describe : "WD259580208@digiwin.biz",
+            subTitle : "135-2563-2547",
+            subDescribe : "000",
+            id : "2"
+        }])
+        lv.on("click", function(ele, obj, curEle) {
+        })
 
     </script>
 </html>

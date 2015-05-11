@@ -2,7 +2,55 @@
 appcan.define("listview", function(a, b, c) {
     var d = '<li class="ubb ub bc-border bc-text ub-ac lis" <%if(group){%>data-group="<%=group%>"<%}%> <%if(data.id){%>id="<%=data.id%>"<%}%> data-index="<%=index%>"><%if(option.hasCheckbox && option.align=="left"){%><div class="checkbox umar-r"><input type="checkbox" class="uabs ub-con" ></div><%}%><%if(option.hasRadiobox && option.align=="left"){%><div class="radiobox umar-r" name=""><input type="radio" class="uabs ub-con" name="lv_radio_<%=option.id%>"></div><%}%><%if(option.hasIcon && data.icon){%><div class="<%if(option.hasSmallIcon){%>lis-icon-ss<%}else{%>lis-icon-s<%}%> ub-img" style="background-image:url(<%=data.icon%>)"></div><%}%><div class="lv_title ub-f1 marg-l ub ub-ver ut-m line<%=option.multiLine%>"><%=data.title%></div><%if(option.hasSubTitle){%><div class="tx-r sc-text ulev-1 umar-r lv_subTitle"><%=data.subTitle%></div><%}%><%if(option.hasControl && data.switchBtn){%><div class="switch uba bc-border <%if(data.switchBtn.mini){%>switch-mini<%}%>" data-checked="<%=data.switchBtn.value%>"><div class="switch-btn sc-bg-active "></div></div><%}%><%if(option.hasAngle && !(option.hasControl && data.switchBtn)){%><div class="fa fa-angle-right ulev2 sc-text"></div><%}%><%if(option.hasCheckbox && option.align=="right"){%><div class="checkbox  umar-l"><input type="checkbox" class="uabs ub-con"></div><%}%><%if(option.hasRadiobox && option.align=="right"){%><div class="radiobox umar-l"><input type="radio" class="uabs ub-con" name="lv_radio_<%=option.id%>"></div><%}%></li>',
         e = '<li id="lv_group_<%=data.groupId%>" class="ubb ub bc-border bc-text sc-bg-active ub-ac lis group" data-index="<%=index%>"><%=data.title%></li>',
-        f = '<li <%if(data.id){%>id="<%=data.id%>"<%}%> class="ubb ub bc-border t-bla ub-ac lis"  data-index="<%=index%>"><%if(option.hasCheckbox && option.align=="left"){%><div class="checkbox umar-r"><input type="checkbox" class="uabs ub-con" ></div><%}%><%if(option.hasRadiobox && option.align=="left"){%><div class="radiobox umar-r" name=""><input type="radio" class="uabs ub-con" name="lv_radio_<%=option.id%>"></div><%}%><%if(option.hasIcon && data.icon){%><ul class="ub ub ub-ver"><li class=""><div class="lis-icon ub-img" style="background-image:url(<%=data.icon%>)"></div><div class="ulev-1 bc-text umar-t"><%=data.icontitle%></div></li></ul><%}%><ul class="ub-f1 ub ub-pj ub-ac"><ul class="ub-f1 ub ub-ver marg-l"><li class="bc-text ub ub-ver ut-m line<%=option.multiLine%>"><%=data.title%></li><%if(data.describe){%><li class="ulev-1 sc-text1 uinn3"><%=data.describe%> </li><%}%><%if(data.note){%><li class="ulev-2 sc-text1 uinn3"><%=data.note%></li><%}%></ul><%if(option.hasSubTitle){%><ul class="ub ub-ver ub-ae umar-r"><%if(data.subTitle){%><li class="bc-text lv_subTitle"><%=data.subTitle%></li><%}%><%if(data.subDescribe){%><li class="ulev-1 sc-text1 uinn3"><%=data.subDescribe%></li><%}%><%if(data.subNote){%><li class="ulev-2 sc-text1 uinn3"><%=data.subNote%></li><%}%></ul><%}%><%if(option.hasControl && data.switchBtn){%><div class="switch uba bc-border <%if(data.switchBtn.mini){%>switch-mini<%}%>" data-checked="<%=data.switchBtn.value%>"><div class="switch-btn sc-bg-active "></div></div><%}%><%if(option.hasAngle && !(option.hasControl && data.switchBtn)){%><li class="fa fa-angle-right ulev2"></li><%}%><%if(option.hasCheckbox && option.align=="right"){%><div class="checkbox  umar-l"><input type="checkbox" class="uabs ub-con"></div><%}%><%if(option.hasRadiobox && option.align=="right"){%><div class="radiobox umar-l"><input type="radio" class="uabs ub-con" name="lv_radio_<%=option.id%>"></div><%}%></ul></li>',
+        f = '<li ' 
+        + '<%if(data.id){%>' 
+        + 'id="<%=data.id%>"<%}%> ' 
+        + 'class="ubb ub bc-border t-bla ub-ac lis" ' 
+        + 'data-index="<%=index%>">' 
+        + '<%if(option.hasCheckbox && option.align=="left"){%>' 
+        + '<div class="checkbox umar-r">' 
+        + '<input type="checkbox" class="uabs ub-con" ></div><%}%>' 
+        + '<%if(option.hasRadiobox && option.align=="left"){%>' 
+        + '<div class="radiobox umar-r" name="">' 
+        + '<input type="radio" class="uabs ub-con" name="lv_radio_<%=option.id%>"></div><%}%>' 
+        + '<%if(option.hasIcon && data.icon){%>' 
+        + '<ul class="ub ub ub-ver"><li class="">' 
+        + '<div class="lis-icon ub-img" style="background-image:url(<%=data.icon%>)"></div>' 
+        + '<div class="ulev-1 bc-text umar-t">' 
+        + '<%=data.icontitle%></div></li></ul><%}%>' 
+        + '<ul class="ub-f1 ub ub-pj ub-ac">' 
+        + '<%if(option.hasId){%><ul class="ub ub-ver marg-l" style="padding:0 .5em 0 0;">' 
+        + '<li class="bc-text ub ub-ver ut-m line<%=option.multiLine%>">' 
+        + '<%=data.id%></li>' 
+        + '<%if(data.note){%>' 
+        + '<li class="ulev-2 sc-text1 uinn3"><%=data.note%>' 
+        + '</li><%}%></ul><%}%>' 
+        + '<ul class="ub-f1 ub ub-ver marg-l">' 
+        + '<li class="bc-text ub ub-ver ut-m line<%=option.multiLine%>">' 
+        + '<%=data.title%></li><%if(data.describe){%>' 
+        + '<li class="ulev-1 sc-text1 uinn3"><%=data.describe%>' 
+        + '</li><%}%>' 
+        + '<%if(data.note){%>' 
+        + '<li class="ulev-2 sc-text1 uinn3"><%=data.note%></li><%}%>' 
+        + '</ul><%if(option.hasSubTitle){%>' 
+        + '<ul class="ub ub-ver ub-ae umar-r"><%if(data.subTitle){%>' 
+        + '<li class="bc-text lv_subTitle"><%=data.subTitle%></li><%}%>' 
+        + '<%if(data.subDescribe){%><li class="ulev-1 sc-text1 uinn3">' 
+        + '<%=data.subDescribe%></li><%}%><%if(data.subNote){%>' 
+        + '<li class="ulev-2 sc-text1 uinn3"><%=data.subNote%></li><%}%>' 
+        + '</ul><%}%><%if(option.hasControl && data.switchBtn){%>' 
+        + '<div class="switch uba bc-border <%if(data.switchBtn.mini){%>' 
+        + 'switch-mini<%}%>" data-checked="<%=data.switchBtn.value%>">' 
+        + '<div class="switch-btn sc-bg-active "></div></div><%}%>' 
+        + '<%if(option.hasAngle && !(option.hasControl && data.switchBtn)){%>' 
+        + '<li class="fa fa-angle-right ulev2"></li><%}%>' 
+        + '<%if(option.hasCheckbox && option.align=="right"){%>' 
+        + '<div class="checkbox  umar-l">' 
+        + '<input type="checkbox" class="uabs ub-con"></div><%}%>' 
+        + '<%if(option.hasRadiobox && option.align=="right"){%>' 
+        + '<div class="radiobox umar-l">' 
+        + '<input type="radio" class="uabs ub-con" name="lv_radio_<%=option.id%>"></div><%}%>' 
+        + '</ul></li>',
         g = appcan.view.template(d),
         h = appcan.view.template(e),
         i = appcan.view.template(f),
@@ -32,6 +80,8 @@ appcan.define("listview", function(a, b, c) {
             id : j++
         }, b, !0), c.ele = a(c.option.selector), c.option.data && c.set(data)
     }
+
+
     l.prototype = {
         buildListview : function(b, c) {
             var d = a("<ul></ul>"),
@@ -136,4 +186,4 @@ appcan.define("listview", function(a, b, c) {
     }, c.exports = function(a) {
         return new l(a)
     }
-}); 
+});

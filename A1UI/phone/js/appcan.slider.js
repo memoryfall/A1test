@@ -1,6 +1,6 @@
 /*! appcan v0.1.6 |  from 3g2win.com */
 appcan.define("slider", function(a, b, c) {
-    var d = '<div class="slider-item ub-fh ub-fv ub-img1" style="background-image:url(<%=data.img%>);">    <span class="uabs"><%=data.label%></span>    </div>',
+    var d = '<div class="slider-item ub-fh ub-fv ub-img1" style="background-image:url(<%=data.img%>);background-size:100% 100%;;">    <span class="uabs"><%=data.label%></span>    </div>',
         e = appcan.view.template(d);
     function f() {
         return "ontouchstart" in window ?
