@@ -12,8 +12,7 @@
         <link rel="stylesheet" href="css/appcan.control.css">
     </head>
     <body class="um-vp bc-bg" ontouchstart>
-        <div id="listview1"  class="ubt bc-border sc-bg"></div>
-        <div id="listview2"  class="ubt bc-border sc-bg"></div>
+        <div id="listview"  class="ubt bc-border sc-bg"></div>
     </body>
     <script src="js/appcan.js"></script>
     <script src="js/appcan.control.js"></script>
@@ -24,55 +23,34 @@
         });
 
         var lv = appcan.listview({
-            selector : "#listview1",
+            selector : "#listview",
             type : "thinLine",
             hasAngle : true
         });
         lv.set([{
-
-            title : "开账",
+            name : "BASDI01",
+            title : "店铺信息维护",
             id : "",
             color : "RGB(250,199,90)",
-
+            url : "shop/BASDI01.html"
         }, {
-            title : "收入",
+            name : "BASDI02",
+            title : "店员信息维护",
             id : "",
-            color : "RGB(133,212,95)"
+            color : "RGB(133,212,95)",
+            url : "shop/BASDI02.html"
         }, {
-            title : "支出",
+            name : "BASDI03",
+            title : "店员权限维护",
             id : "",
-            color : "RGB(255,166,86)"
-        }])
-        lv.on("click", function(ele, obj, curEle) {
-            if (obj.name && obj.url) {
-                appcan.window.open(obj.name, obj.url, 10);
-            }
-        })
-        var lv = appcan.listview({
-            selector : "#listview2",
-            type : "thinLine",
-            hasAngle : true,
-        });
-        lv.set([{
-            title : "余额调整",
-            id : "",
-            color : "RGB(254,109,114)"
+            color : "RGB(255,166,86)",
+            url : "shop/BASDI03.html"
         }, {
-            title : "资金流水",
+            name : "BASDI04",
+            title : "店铺销量报表",
             id : "",
-            color : "RGB(252,221,115)"
-        }, {
-            name : "biao",
-            title : "订单利润表",
-            id : "",
-            color : "RGB(93,206,240)",
-            url : "biao.html"
-        }, {
-            name : "test",
-            title : "订单商品利润表",
-            id : "",
-            color : "RGB(147,145,229)",
-            url : "test.html"
+            color : "RGB(254,109,114)",
+            url : "shop/BASDI04.html"
         }])
         lv.on("click", function(ele, obj, curEle) {
             if (obj.name && obj.url) {

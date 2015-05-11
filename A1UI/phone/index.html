@@ -10,86 +10,120 @@
         <link rel="stylesheet" href="css/ui-color.css">
         <link rel="stylesheet" href="css/appcan.icon.css">
         <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="index_content/css/main.css">
     </head>
-    <body class="um-vp" ontouchstart>
-        <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
-            <!--header开始-->
-            <div id="header" class="uh bc-text-head ub bc-head">
-                <div class="nav-btn" id="nav-left"></div>
-                <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">云商务</h1>
-                <div class="nav-btn" id="nav-right">
-                    <!--按钮开始-->
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        #main {
+            background-color: #FFFFFF;
+            height: 100%;
+        }
+        #nav {
+            background-color: #FFFFFF;
+            width: 100%;
+            height: 40%;
+        }
+        #content {
+            background-color: #FFFFFF;
+            width: 100%;
+            position: absolute;
+            top: 40%;
+            bottom: 0px;
+            left: 0px;
+        }
+    </style>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div id="main">
+            <div id="nav">
+                <!--header开始-->
+                <div style="height: 25%;">
+                    <div id="header" class="uh bc-text-head ub bc-head">
+                        <div class="nav-btn" id="nav-left"></div>
+                        <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">云商务</h1>
+                        <div class="nav-btn" id="nav-right">
+                            <!--按钮开始-->
 
-                    <!--按钮结束-->
+                            <!--按钮结束-->
+                        </div>
+                    </div>
+                </div>
+                <!--header结束-->
+                <div class="uh  ub ub-ver" style="height: 80%;">
+                    <div id="slider" class="slider" style="height: 95%;"></div>
+                    <div class="uh  ub ub-ver" style="height: 5%;"></div>
                 </div>
             </div>
-            <!--header结束--><!--content开始-->
-            <div id="content" class="ub-f1 tx-l ">
-                
+            <div id="content">
+                <div class="ub-hor tx-l ub bc-text-head uinn" style="padding: 0;height: 100%;width: 100%;bottom: 0;">
+                    <div class="ub-f1 ub ub-ver">
+                        <div class="link ub-f2 ub ub-ver ub-ac ub-pc uof" style="border:solid;border-width:0.2em;background-color: #F67B7D; border-radius:0.3em;" data-name="shop" data-url="shop.html">
+                            <div class="ub-img xtapi apipicwh1 marg1"></div>
+                        </div>
+                        <div class="ub-f1 ub ub-hor">
+                            <div class="link ub-f1 ub ub-ver ub-ac jmbg padd1  ub-pc"  style="border:solid;border-width:0.2em;background-color: #9592EB; border-radius:0.3em;" data-name="goods" data-url="goods.html">
+                                <div class="apipicwh ub-img jmapi marg1"></div>
+                            </div>
+                            <div class="link ub-f1 ub ub-ver ub-ac wlbg padd1  ub-pc"  style="border:solid;border-width:0.2em;background-color: #F88862; border-radius:0.3em;" data-name="stock" data-url="stock.html">
+                                <div class="apipicwh ub-img jmapi marg1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ub-f1 ub ub-ver">
+                        <div class="ub-f1 ub ub-hor">
+                            <div class="link ub-f1 ub ub-ver ub-ac jmbg padd1  ub-pc"  style="border:solid;border-width:0.2em;background-color: #79C6EC; border-radius:0.3em;" data-name="customer" data-url="customer.html">
+                                <div class="apipicwh ub-img jmapi marg1"></div>
+                            </div>
+                            <div class="link ub-f1 ub ub-ver ub-ac wlbg padd1  ub-pc"  style="border:solid;border-width:0.2em;background-color: #AEE588; border-radius:0.3em;" data-name="sell" data-url="sell.html">
+                                <div class="apipicwh ub-img jmapi marg1"></div>
+                            </div>
+                        </div>
+                        <div class="link ub-f2 ub ub-ver ub-ac ub-pc uof" style="border:solid;border-width:0.2em;background-color: #F8DC7C; border-radius:0.3em;" data-name="account" data-url="account.html">
+                            <div class="ub-img xtapi apipicwh1 marg1"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--content结束-->
-            <!--footer开始-->
-            <div id='footer' class='uf c-m2 c-bla t-wh'>
-                <div id="tabview" class="uf sc-bg ubt sc-border-tab"></div>
-                <!--footer结束-->
-            </div>
+        </div>
+
         </div>
         <script src="js/appcan.js"></script>
         <script src="js/appcan.control.js"></script>
-        <script src="js/appcan.control.js"></script>
-        <script src="js/appcan.listview.js"></script>
-        <script src="js/appcan.tab.js"></script>
+        <script src="js/appcan.slider.js"></script>
     </body>
     <script>
-        appcan.button(".btn", "ani-act", function() {
-            /*添加按钮点击处理代码*/
-            console.log(this.id);
-        });
         appcan.ready(function() {
-            var titHeight = $('#header').offset().height;
-            appcan.frame.open("content", "index_content.html", 0, titHeight);
-            window.onorientationchange = window.onresize = function() {
-                appcan.frame.resize("content", 0, titHeight);
-            }
+            appcan.initBounce();
         });
-        var tabview = appcan.tab({
-            selector : "#tabview",
-            hasIcon : true,
-            hasAnim : true,
+        appcan.button(".link", "ani-act", function() {
+            appcan.window.open($(this).data("name"), $(this).data("url"), 10);
+        })
+        var slider = appcan.slider({
+            selector : '#slider',
+            aspectRatio : 0,
             hasLabel : true,
-            hasBadge : true,
-            data : [{
-                label : "首页",
-                "icon" : "fa-home",
-            }, {
-                label : "报表",
-                "icon" : "fa-list-alt"
-            }, {
-                label : "我的",
-                "icon" : "fa-user",
-            }, {
-                label : "更多",
-                "icon" : "fa-plus-square",
-            }]
+            index : 0
         });
-        appcan.button(".uf","btn-act", function() {
-            var titHeight = $('#header').offset().height;
-            tabview.on("click", function(obj, index) {/*TAB变更时切换多浮动窗口*/
-                switch(index) {
-                case 0:
-                    appcan.frame.open("content", 'index_content.html', 0, titHeight);
-                    break;
-                case 1:
-                    appcan.frame.open("content", 'biao_content.html', 0, titHeight);
-                    break;
-                case 2:
-                    appcan.frame.open("content", '_content.html', 0, titHeight);
-                    break;
-                default:
-                    appcan.frame.open("content", '_content.html', 0, titHeight);
-                    break;
-                }
-            });
-        });
+        slider.set([{
+            img : "index_content/css/myImg/main.png",
+            label : "主页"
+        }, {
+            img : "",
+            label : "111"
+        }, {
+            img : "",
+            label : ""
+        }, {
+            img : "",
+            label : ""
+        }, {
+            img : "",
+            label : ""
+        }])
+        slider.on("clickItem", function(index, data) {
+        })
     </script>
 </html>
