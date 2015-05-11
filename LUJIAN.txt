@@ -2,4 +2,7 @@ first commit test from lujian
 登录测试
 注册测试
 找回密码测试
+学习LocStorage和UexDatabaseMgr
 学习node.js与js开发知识
+学习MVC4 WEB API，编写了简单的测试；
+实现本地数据库的数据存储
