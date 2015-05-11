@@ -1,0 +1,112 @@
+.b-gra {
+    border-color: #d8d8d8;
+}
+.t-blu {
+    color: #177fc7;
+}
+.uinnh5 {
+    padding: 0.5em 0.5em;
+    margin: 0;
+}
+.respwd {
+    background-image: url('myImg/pwd.png');
+}
+.resuser {
+    background-image: url('myImg/user.png');
+}
+.logo {
+    background-image: url('myImg/logo.png');
+}
+.resweidian {
+    background-image: url('myImg/weidian.png');
+}
+.restaobao {
+    background-image: url('myImg/taobao.png');
+}
+.umhw {
+    min-height: 1em;
+    min-width: 1em;
+}
+.umhw2 {
+    min-height: 3.6em;
+    min-width: 3.6em;
+}
+.ulab .uinput {
+    margin-left: 3px
+}
+.uinput input, .uinput textarea {
+    margin: 0px;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    padding: .4em 0;
+    line-height: 1.2em;
+    background: none;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+}
+.b-gra {
+    border-color: #b7b7b7;
+}
+.t-gra {
+    color: #a1a1a1;
+}
+.addfont {
+    font-weight: bold;
+}
+.t-blu {
+    color: #177fc7;
+}
+.uinnh5 {
+    padding: 0.8em 0.5em;
+    margin: 0;
+}
+.umhw {
+    min-height: 1.5em;
+    min-width: 1.5em;
+}
+.umhw1 {
+    padding: 0 0em;
+    min-height: 1em;
+    min-width: 1em;
+}
+.umhw2 {
+    min-height: 1.5em;
+    min-width: 9em;
+}
+.test {
+    display: inline-block;
+    width: 220px;
+    vertical-align: middle;
+    text-align: center;
+}
+.bg-image {
+    background-image: url('myImg/login.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+::-webkit-input-placeholder {/* WebKit browsers */
+    color: #FFFFFF;
+    font-size: .9em;
+    font-weight: bold;
+}
+:-moz-placeholder {/* Mozilla Firefox 4 to 18 */
+    color: #FFFFFF;
+    font-size: .9em;
+    font-weight: bold;
+    opacity: 1;
+}
+::-moz-placeholder {/* Mozilla Firefox 19+ */
+    color: #FFFFFF;
+    font-size: .9em;
+    font-weight: bold;
+    opacity: 1;
+}
+:-ms-input-placeholder {/* Internet Explorer 10+ */
+    color: #FFFFFF;
+    font-size: .9em;
+    font-weight: bold;
+}
