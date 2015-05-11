@@ -1,0 +1,281 @@
+.marg-l{
+    margin-left: .5em;
+}
+.wid{
+    width: .5em;
+    height: .5em;
+    background: #000;
+    margin-right: .5em;
+}
+.ulimw{
+    max-width: 6em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.uin{
+    padding: 0 .7em;
+}
+.uin1{
+    padding: 2em 0 .5em;
+}
+.uin2 {
+padding: 0 1.5em;
+margin: 0;
+}
+.uin3 {
+padding: 1.5em 0 0 1.5em;
+margin: 0;
+}
+.uin4 {
+padding: 1em 0 0;
+margin: 0;
+}
+.uin5 {
+padding: .8em;
+margin: 0;
+}
+.uin6 {
+padding:0  .8em;
+margin: 0;
+}
+.uin7 {
+padding:.5em 0 0 2em;
+margin: 0;
+}
+.uin8 {
+padding: 1.7em 1.5em .5em;
+margin: 0;
+}
+.uin9 {
+padding:1em 1em 0;
+margin: 0;
+}
+.uin10 {
+padding:0 1.5em .5em;
+margin: 0;
+}
+.uin11 {
+padding:.5em 0  0;
+margin: 0;
+}
+.uin12{
+    padding:1em .5em .5em;
+    margin: 0;
+}
+.lis-th1 {
+width: 2em;
+margin: 0em 0.4em 0em 0px;
+min-height: 2em;
+}
+.lis-th2 {
+width: 3.5em;
+min-height: 3.5em;
+margin: 0em 0.4em .5em .4em;
+}
+.mar-b{
+    margin-bottom: 2em;
+    margin-right: .5em;
+}
+.mar-r{
+    margin-right: .6em;
+}
+.mar-l{
+    margin-left: .6em;
+}
+input[type=radio]:checked+div.border-b {
+    border-bottom: 2px solid #218dd5;
+    color: #218dd5;
+}
+
+.apipicwh{
+    width: 2.656em;
+    height: 2.688em;
+}
+.apipicwh1{
+    width: 6.625em;
+    height: 5.531em;
+}
+.marg{
+    margin: .3em 1.5em 0 0;
+}
+.marg1{
+    margin: .35em;
+}
+.marg2{
+    margin-top: .5em;
+}
+.uibg{
+    background: #a4cffc;
+}
+.uikjbg{
+    background: #5baaff;
+}
+.jssdkbg{
+    background: #5488e2;
+}
+.xtbg{
+    background: #bbe575;
+}
+.jmbg{
+    background: #9ad2d7;
+}
+.wlbg{
+    background: #52d1cd;
+}
+.sfbg{
+    background: #1253f9;
+}
+.dmtbg{
+    background: #209be7;
+}
+.albg{
+    background: #a4b6fc;
+}
+.border-c{
+    border-color: #E6E6E6;
+}
+.font-c{
+    color: #5c5c5c;
+}
+.font-c2{
+    color: #0054bc;
+}
+.font-c3{
+    color: #a0a0a0;
+}
+.font-c4{
+    color: #009ef7;
+}
+.swiopen{
+    background-image:url('project/myImg/open1.png') !important;
+}
+
+.uinn-a15 {
+padding: 0.52em 0;
+}
+.btn41-hover{
+    background: #0054bc;
+}
+.font-s{
+    font-size: .85em;
+}
+.font-s1{
+    font-size: .78em;
+}
+.font-s2{
+    font-size: .9em;
+}
+.breakword{
+    white-space:normal; 
+    word-break:break-all;
+    overflow:hidden;
+    Word-wrap:break-word;
+}
+.cor-blu{
+     background: #5488e2;
+    background-repeat:no-repeat,no-repeat,no-repeat;
+    -webkit-background-clip: padding-box,content-box,padding-box;
+    background-clip: padding-box,content-box,padding-box;
+    -webkit-background-size:0.4em 100%,100% 100%,0.4em 100%;
+    background-size:0.4em 100%,100% 100%,0.4em 100%;
+    background-position:left,center,right;
+}
+.btn1-cor{
+    background: #9ad2d7;
+    background-repeat:no-repeat,no-repeat,no-repeat;
+    -webkit-background-clip: padding-box,content-box,padding-box;
+    background-clip: padding-box,content-box,padding-box;
+    -webkit-background-size:0.4em 100%,100% 100%,0.4em 100%;
+    background-size:0.4em 100%,100% 100%,0.4em 100%;
+    background-position:left,center,right;
+    padding:.2em 0.9em;
+    min-height:2.1em;
+}
+.btn1-hover{
+    background: #56ccd7;
+}
+.tcxx{
+color: #bebdbf;
+min-height: 4em;
+padding: 0 1.5em;
+}
+.img_posit{
+    width:20em;
+    height:auto;
+}
+.umh1-7{
+    height: 1.5em;
+}
+.umw1-7{
+    width: 1.5em;
+}
+/**/
+.btn
+{
+    font-size: .8125em;
+    text-align:center;
+}    
+/**/
+    
+/*input*/
+
+input[type=checkbox]:checked+div>div.che-icon {
+    background-color:#72E466;
+    background-image: url(myImg/icons-18-white_37.png);
+}
+/*input*/
+.kuohao{
+    color:#bababa;
+    font-size:.8em;
+}
+.text-i{
+    text-indent: 2em;
+}
+
+.audio{
+    background-image: url(myImg/audio.gif);
+    height: 10em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+/*首页开始*/
+.sw {
+    transform: scale(0.95,0.97);
+    -webkit-transform: scale(0.95,0.97);
+    /*-webkit-transition:all 150ms ease-in 100ms*/
+    -webkit-transition-duration: 100ms;
+    opacity: .6;
+}
+.padd1{
+    padding: 0 .5em;
+}
+.font-p{
+    padding: .4em 0 0;
+}
+.frame{
+    background: #dbecfe;
+    color: #75b8ff;
+    position: absolute;
+    top: 0;
+    left:0;
+    -webkit-transform:rotate(-52deg);
+    transform:rotate(-52deg);
+    padding: .3em 1.7em;
+    margin-left: -2em;
+    margin-top: .5em;
+}
+.frame1{
+    background: #e4f5c8;
+    color: #a1ca5d;
+    position: absolute;
+    top: 0;
+    left:0;
+    -webkit-transform:rotate(-50deg);
+    transform:rotate(-50deg);
+    padding: .3em 1.7em;
+    margin-left: -2.2em;
+    margin-top: 1em;
+}
+/*首页结束*/

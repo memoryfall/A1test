@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div id="listview"  class="ubt bc-border sc-bg"></div>
+    </body>
+    <script src="js/appcan.js"></script>
+    <script src="js/appcan.control.js"></script>
+    <script src="js/zhang.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+        });
+
+        var lv = appcan.listview({
+            selector : "#listview",
+            type : "thinLine",
+            hasAngle : true
+        });
+        lv.set([{
+            name : "BASDI01",
+            title : "店铺信息维护",
+            id : "",
+            color : "RGB(250,199,90)",
+            url : "shop/BASDI01.html"
+        }, {
+            name : "BASDI02",
+            title : "店员信息维护",
+            id : "",
+            color : "RGB(133,212,95)",
+            url : "shop/BASDI02.html"
+        }, {
+            name : "BASDI03",
+            title : "店员权限维护",
+            id : "",
+            color : "RGB(255,166,86)",
+            url : "shop/BASDI03.html"
+        }, {
+            name : "BASDI04",
+            title : "店铺销量报表",
+            id : "",
+            color : "RGB(254,109,114)",
+            url : "shop/BASDI04.html"
+        }])
+        lv.on("click", function(ele, obj, curEle) {
+            if (obj.name && obj.url) {
+                appcan.window.open(obj.name, obj.url, 10);
+            }
+        })
+    </script>
+</html>

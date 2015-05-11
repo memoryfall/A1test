@@ -1,0 +1,56 @@
+.squIcon1{
+	background-image:url('myImg/squIcon1.png');
+}
+.squIcon2{
+	background-image:url('myImg/squIcon2.png');
+}
+.squIcon3{
+	background-image:url('myImg/squIcon3.png');
+}
+.squIcon4{
+	background-image:url('myImg/squIcon4.png');
+}
+.squIcon5{
+	background-image:url('myImg/squIcon5.png');
+}
+.squIcon6{
+	background-image:url('myImg/squIcon6.png');
+}
+.uinn-squ1{
+	padding:2.125em 1.0625em;
+}
+.uwh-squ1{
+	width:5em;
+	height:5em;
+}
+.uc-a-squ1{
+	-webkit-border-radius: 5em;
+	border-radius: 5em;
+}
+.c-gre1-squ{
+	background-color:#85bf22;
+}
+.c-red1-squ{
+	background-color:#dc1649;
+}
+.c-gra1-squ{
+	background-color:#acbcc4;
+}
+.c-blu1-squ{
+	background-color:#16a5d7;
+}
+.c-org1-squ{
+	background-color:#e6ae26;
+}
+.c-org2-squ{
+	background-color:#e56e05;
+}
+.ulev-squ{
+	font-size:0.9375em;
+}
+.t-gra7{
+	color:#6a6a6a;
+}
+.umar-at1{
+    margin-top:0.625em;
+}
