@@ -37,9 +37,11 @@
 
         });
         lv.set([{
+            name:"shop",
             title : "卖卖东东的小店",
             describe : "2595802",
             subTitle : "天猫",
+            url:"BASDI01/Edit.html",
             id : "1"
         }, {
             title : "卖卖东东的小店",
@@ -48,6 +50,9 @@
             id : "2"
         }])
         lv.on("click", function(ele, obj, curEle) {
+            if (obj.name && obj.url) {
+                appcan.window.open(obj.name, obj.url+"?shopid="+obj.id, 10);
+            }
         })
 
     </script>
