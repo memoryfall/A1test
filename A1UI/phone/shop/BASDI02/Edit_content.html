@@ -10,9 +10,114 @@
         <link rel="stylesheet" href="../../css/ui-color.css">
         <link rel="stylesheet" href="../../css/appcan.icon.css">
         <link rel="stylesheet" href="../../css/appcan.control.css">
+        <link rel="stylesheet" href="css/BASDI02.css" />
     </head>
     <body class="um-vp bc-bg" ontouchstart>
-        I am the pop view.
+        <div style="background-color: #AAAAAA ; padding: 10px">
+            <div class="" style="background-color:#FFFFFF; padding: 10px;padding-bottom:0px; border-radius: 0.3em">
+                <div class=" c-wh ub uinn-a7 ub-ac umar-at1 border-bot">
+                    <div class="ulev-app1 umw4">
+                        登入帐号：
+                    </div>
+                    <div class="ub ub-ac umh5 ub-f1 ">
+                        <div class="uinput ub ub-f1 ">
+                            <input placeholder="四维" type="text" class="ub-f1">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class=" c-wh ub uinn-a7 ub-ac umar-at1 border-bot">
+                    <div class="ulev-app1 umw4">
+                        密码：
+                    </div>
+                    <div class="ub ub-ac umh5 ub-f1 " style="">
+                        <div class="uinput ub ub-f1">
+                            <input placeholder="四维" type="text" class="ub-f1">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class=" c-wh ub uinn-a7 ub-ac umar-at1 border-bot">
+                    <div class="ulev-app1 umw4">
+                        使用者代号：
+                    </div>
+                    <div class="ub ub-ac umh5 ub-f1">
+                        <div class="uinput ub ub-f1">
+                            <input placeholder="四维" type="text" class="ub-f1">
+                        </div>
+                    </div>
+                </div>
+                            
+                <div class=" c-wh ub uinn-a7 ub-ac umar-at1 border-bot">
+                    <div class="ulev-app1 umw4">
+                        使用者姓名：
+                    </div>
+                    <div class="ub ub-ac umh5 ub-f1">
+                        <div class="uinput ub ub-f1">
+                            <input placeholder="四维" type="text" class="ub-f1">
+                        </div>
+                    </div>
+                </div>
+               
+                <div class=" c-wh ub uinn-a7 ub-ac umar-at1 border-bot">
+                    <div class="ulev-app1 umw4">
+                        性别
+                    </div>
+                    <div class="ub ub-ac umh5 ub-f1 radiobox">
+                        <div class="ub ub-f1">
+                            <input  type="radio" class="ub-f1" value="男" name="性别" checked="checked">男
+                        </div>
+                        <div class="ub ub-f1 radiobox">
+                            <input  type="radio" class="ub-f1" value="女" name="性别">女
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="  c-wh ub uinn-a7 ub-ac umar-at1 border-bot">
+                    <div class="ulev-app1 umw4">
+                        手机：
+                    </div>
+                    <div class="ub ub-ac umh5 ub-f1">
+                        <div class="uinput ub ub-f1">
+                            <input placeholder="四维" type="text" class="ub-f1">
+                        </div>
+                    </div>
+                </div>
+                 
+                <div class="  c-wh ub uinn-a7 ub-ac umar-at1 border-bot">
+                    <div class="ulev-app1 umw4">
+                        电话：
+                    </div>
+                    <div class="ub ub-ac umh5 ub-f1">
+                        <div class="uinput ub ub-f1">
+                            <input placeholder="四维" type="text" class="ub-f1">
+                        </div>
+                    </div>
+                </div>   
+                
+                <div class=" c-wh ub uinn-a7 ub-ac ub-pc umar-at1">
+  
+                    <div class="ub ub-ac ub-pc umh5 ub-f1 ">
+                        <div class="checkbox">
+                            <input  type="checkbox" class="ub-f1" value="stop" name="stop" >
+                        </div>停用
+
+                    </div>
+                </div>                   
+                    
+    
+            </div>
+               <div class="ub ub-ac ub-pc" >
+                    <div class=" ub ub-ac bc-text-head ub-pc  two-btn" style="margin: 10px" id="save-btn">
+    保存
+                    </div>
+                    <div class=" ub ub-ac bc-text-head ub-pc  two-btn" style="margin: 10px" id="cancel-btn">
+    取消
+</div>
+
+                </div> 
+        </div>
     </body>
     <script src="../../js/appcan.js"></script>
     <script src="../../js/appcan.control.js"></script>
@@ -21,5 +126,12 @@
         appcan.ready(function() {
         });
 
-    </script>
+       
+appcan.button("#save-btn", "ani-act", function() {
+           
+})
+appcan.button("#cancel-btn", "ani-act", function() {
+            
+})
+ </script>
 </html>

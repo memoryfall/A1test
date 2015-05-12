@@ -2,3 +2,4 @@
 2015-04-29 A1test/A1server&A1UI firstcommit 确定一个基础的版本
 2015-05-04 nothing
 2015-05-05 nothing
+2015-05-12 A1test/A1UI   修改了新增店员和店员信息管理等页面，研究Angular.js框架
