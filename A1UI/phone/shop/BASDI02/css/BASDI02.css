@@ -1,0 +1,18 @@
+.border-bot{
+    border-bottom-width:1px;
+    border-bottom-style:solid; border-bottom-color:#AAAAAA;
+    
+}
+
+.two-btn{
+    min-height: 2em;
+    min-width: 5em;
+    padding: .2em .9em;
+}
+#cancel-btn{
+    background-color: #83BA41;
+}
+
+#save-btn{
+    background-color: #EF6413;
+}
