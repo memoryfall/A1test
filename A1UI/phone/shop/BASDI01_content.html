@@ -14,7 +14,7 @@
     <body class="um-vp bc-bg" ontouchstart>
         <div class="sc-bg-active uinput ub ub-f1  bc-border uba" style="padding: .5em;">
             <div class="uinn fa fa-search sc-text"></div>
-            <input placeholder="请输入搜索城市" type="text" class="ub-f1">
+            <input placeholder="店铺名称" type="text" class="ub-f1">
         </div>
         <div id="listview"  class="ubt bc-border sc-bg"></div><div id="listview"  class="ubt bc-border sc-bg"></div>
     </body>
@@ -41,17 +41,26 @@
             title : "卖卖东东的小店",
             describe : "2595802",
             subTitle : "天猫",
-            url:"BASDI01/Edit.html",
+            url:"BASDI01/Edit.html?shopid=",
             id : "1"
         }, {
+            name:"shop",
             title : "卖卖东东的小店",
             describe : "2595802",
             subTitle : "天猫",
+            url:"BASDI01/Edit.html?shopid=",
             id : "2"
+        }, {
+            name:"shop",
+            title : "卖卖东东的小店",
+            describe : "2595802",
+            subTitle : "天猫",
+            url:"BASDI01/Edit.html?shopid=",
+            id : "100"
         }])
         lv.on("click", function(ele, obj, curEle) {
             if (obj.name && obj.url) {
-                appcan.window.open(obj.name, obj.url+"?shopid="+obj.id, 10);
+                appcan.window.open(obj.name, obj.url+obj.id, 10);
             }
         })
 

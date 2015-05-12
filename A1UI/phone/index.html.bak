@@ -92,7 +92,7 @@
                     appcan.frame.open("content", 'more_content.html', 0, titHeight);
                     break;
                 default:
-                    appcan.frame.open("content", 'test_content.html', 0, titHeight);
+                    appcan.frame.open("content", 'test/test_content.html', 0, titHeight);
                     break;
                 }
             });

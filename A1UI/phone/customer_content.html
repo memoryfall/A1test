@@ -16,7 +16,7 @@
     </body>
     <script src="js/appcan.js"></script>
     <script src="js/appcan.control.js"></script>
-    <script src="js/zhang.listview.js"></script>
+    <script src="js/my.listview.js"></script>
     </body>
     <script>
         appcan.ready(function() {
@@ -33,6 +33,12 @@
             id : "",
             color : "RGB(250,199,90)",
             url : "customer/BASDI08.html"
+        },{
+            name : "test",
+            title : "测试",
+            id : "",
+            color : "RGB(250,123,90)",
+            url : "test/test.html"
         }])
         lv.on("click", function(ele, obj, curEle) {
             if (obj.name && obj.url) {

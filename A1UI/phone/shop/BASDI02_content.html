@@ -31,19 +31,26 @@
             multiLine : 1,
         });
         lv.set([{
+            name : "1",
             title : "李小白",
             describe : "WD259580208@digiwin.biz",
             subTitle : "135-2563-2547",
             subDescribe : "000",
+            url : "BASDI02/Edit.html",
             id : "1"
         }, {
+            name : "1",
             title : "李小白",
             describe : "WD259580208@digiwin.biz",
             subTitle : "135-2563-2547",
             subDescribe : "000",
+            url : "BASDI02/Edit.html",
             id : "2"
         }])
         lv.on("click", function(ele, obj, curEle) {
+            if (obj.name && obj.url) {
+                appcan.window.open(obj.name, obj.url, 10);
+            }
         })
 
     </script>

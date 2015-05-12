@@ -1,6 +1,22 @@
+function Request(strName) {
+    var strHref = window.document.location.href;
+    var intPos = strHref.indexOf("?");
+    var strRight = strHref.substr(intPos + 1);
+
+    var arrTmp = strRight.split("&");
+    for (var i = 0; i < arrTmp.length; i++) {
+        var arrTemp = arrTmp[i].split("=");
+
+        if (arrTemp[0].toUpperCase() == strName.toUpperCase())
+            return arrTemp[1];
+    }
+    return "";
+}
+
+var Rtext = Request("shopid");
 var data = [];
 //创建一万条示例数据
-for (var i = 0; i < 100; i++) {
+for (var i = 0; i < 10; i++) {
     var row = {
         id : i,
         ShopType : "微店" + i,
@@ -20,7 +36,7 @@ for (var i = 0; i < 100; i++) {
     };
     data.push(row);
 }
-document.getElementById("ShopType").innerHTML = data[9]["ShopType"];
+document.getElementById("ShopType").innerHTML = data[Rtext]["ShopType"];
 document.getElementById("DAA002").value = data[9]["shopname"];
 document.getElementById("DAA011").value = data[9]["shopkeeper"];
 document.getElementById("DAA010").value = data[9]["Email"];

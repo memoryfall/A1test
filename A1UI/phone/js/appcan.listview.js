@@ -2,7 +2,7 @@
 appcan.define("listview", function(a, b, c) {
     var d = '<li class="ubb ub bc-border bc-text ub-ac lis" <%if(group){%>data-group="<%=group%>"<%}%> <%if(data.id){%>id="<%=data.id%>"<%}%> data-index="<%=index%>"><%if(option.hasCheckbox && option.align=="left"){%><div class="checkbox umar-r"><input type="checkbox" class="uabs ub-con" ></div><%}%><%if(option.hasRadiobox && option.align=="left"){%><div class="radiobox umar-r" name=""><input type="radio" class="uabs ub-con" name="lv_radio_<%=option.id%>"></div><%}%><%if(option.hasIcon && data.icon){%><div class="<%if(option.hasSmallIcon){%>lis-icon-ss<%}else{%>lis-icon-s<%}%> ub-img" style="background-image:url(<%=data.icon%>)"></div><%}%><div class="lv_title ub-f1 marg-l ub ub-ver ut-m line<%=option.multiLine%>"><%=data.title%></div><%if(option.hasSubTitle){%><div class="tx-r sc-text ulev-1 umar-r lv_subTitle"><%=data.subTitle%></div><%}%><%if(option.hasControl && data.switchBtn){%><div class="switch uba bc-border <%if(data.switchBtn.mini){%>switch-mini<%}%>" data-checked="<%=data.switchBtn.value%>"><div class="switch-btn sc-bg-active "></div></div><%}%><%if(option.hasAngle && !(option.hasControl && data.switchBtn)){%><div class="fa fa-angle-right ulev2 sc-text"></div><%}%><%if(option.hasCheckbox && option.align=="right"){%><div class="checkbox  umar-l"><input type="checkbox" class="uabs ub-con"></div><%}%><%if(option.hasRadiobox && option.align=="right"){%><div class="radiobox umar-l"><input type="radio" class="uabs ub-con" name="lv_radio_<%=option.id%>"></div><%}%></li>',
         e = '<li id="lv_group_<%=data.groupId%>" class="ubb ub bc-border bc-text sc-bg-active ub-ac lis group" data-index="<%=index%>"><%=data.title%></li>',
-        f = '<li ' 
+        f = '<li style="border-top: 1px solid #9F9F9F; margin-top:-1px"' 
         + '<%if(data.id){%>' 
         + 'id="<%=data.id%>"<%}%> ' 
         + 'class="ubb ub bc-border t-bla ub-ac lis" ' 
@@ -84,7 +84,7 @@ appcan.define("listview", function(a, b, c) {
 
     l.prototype = {
         buildListview : function(b, c) {
-            var d = a("<ul></ul>"),
+            var d = a("<ul style='overflow:hidden'></ul>"),
                 e = this,
                 f = "thinLine" == e.option.type ? g : i;
             for (var h in b) {
