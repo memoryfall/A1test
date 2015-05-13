@@ -1,0 +1,90 @@
+/*****************************************/
+/*基础header颜色*/
+.bc-head {
+    background-color: #83BA41;
+}
+/*****************************************/
+/*基础body背景颜色*/
+.bc-bg {
+    background-color: #FFFFFF;
+}
+/*辅助控件背景颜色（如：审批意见输入框背景）*/
+.sc-bg {
+    background-color: #FFFFFF;
+}
+/*辅助控件背景颜色（如：输入框）*/
+.sc-bg-active {
+    background-color: #FFFFFF;
+}
+/*警告背景色*/
+.sc-bg-alert {
+    background-color: #F16412;
+}
+/*****************************************/
+/*基础字体颜色*/
+.bc-text {
+    color: black;
+}
+/*基础标题字体颜色*/
+.bc-text-head {
+    color: #FFFFFF;
+}
+/*辅助字体颜色（如：箭头）*/
+.sc-text {
+    color: #9F9F9F;
+}
+.sc-text1 {
+    color: #9F9F9F;
+}
+/*辅助字体颜色-（如：忘记密码）*/
+.sc-text-active {
+    color: #FFFFFF !important;
+}
+/*辅助字体颜色(如：图片滑块说明)*/
+.sc-text-hint {
+    color: #FFFFFF;
+}
+/*辅助字体颜色*/
+.sc-text-warn {
+    color: #FC7800;
+}
+/*辅助字体颜色*/
+.sc-text-tab {
+    color: #636363;
+}
+/*****************************************/
+/*基础边框颜色*/
+.bc-border {
+    border-color: #FFFFFF;
+}
+/*辅助边框颜色*/
+.sc-border {
+    border-color: #FFFFFF;
+}
+.sc-border-tab {
+    border-color: #66c769;
+}
+/*****************************************/
+/*基础按钮颜色*/
+.bc-btn {
+    background-color: #83BA41;
+}
+/*辅助按钮颜色*/
+.sc-btn {
+    background-color: RGB(249,185,51);
+}
+.size {
+    font-size: .9em;
+}
+.txtcolor {
+    color: #6f6f6f;
+}
+.txtcolor1 {
+    color: #d10000;
+}
+.txtcolor2 {
+    color: #6ec00e;
+}
+.c-gra1 {
+    background-color: #FFFFFF;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="index_content/css/main.css">
+    </head>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        #main {
+            background-color: #FFFFFF;
+            height: 40%;
+        }
+        #nav {
+            background-color: #FFFFFF;
+            width: 100%;
+            height: 4em;
+        }
+        #content {
+            background-color: #FFFFFF;
+            width: 100%;
+            position: absolute;
+            top: 4em;
+            bottom: 0px;
+            left: 0px;
+        }
+    </style>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div id="main">
+            <div id="nav">
+                <!--header开始-->
+                <div id="header" class="uh bc-text-head ub bc-head">
+                    <div class="nav-btn" id="nav-left"></div>
+                    <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">云商务</h1>
+                    <div class="nav-btn" id="nav-right">
+                        <!--按钮开始-->
+
+                        <!--按钮结束-->
+                    </div>
+                </div>
+                <!--header结束-->
+            </div>
+            <div id="content">
+                <div class="uh  ub ub-ver" style="height: 100%;padding: 0">
+                    <div id="slider" class="slider" style="height: 95%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="ub-hor tx-l ub bc-text-head uinn" style="padding: 0;height: 60%;width: 100%;bottom: 0;">
+            <div class="ub-f1 ub ub-ver">
+                <div class="link ub-f2 ub ub-ver ub-ac ub-pc uof" style="border:solid;border-width:0.2em;background-color: #F67B7D; border-radius:0.3em;" data-name="shop" data-url="shop.html">
+                    <div class="ub-img xtapi apipicwh1 marg1"></div>
+                </div>
+                <div class="ub-f1 ub ub-hor">
+                    <div class="link ub-f1 ub ub-ver ub-ac jmbg padd1  ub-pc"  style="border:solid;border-width:0.2em;background-color: #9592EB; border-radius:0.3em;" data-name="goods" data-url="goods.html">
+                        <div class="apipicwh ub-img jmapi marg1"></div>
+                    </div>
+                    <div class="link ub-f1 ub ub-ver ub-ac wlbg padd1  ub-pc"  style="border:solid;border-width:0.2em;background-color: #F88862; border-radius:0.3em;" data-name="stock" data-url="stock.html">
+                        <div class="apipicwh ub-img jmapi marg1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ub-f1 ub ub-ver">
+                <div class="ub-f1 ub ub-hor">
+                    <div class="link ub-f1 ub ub-ver ub-ac jmbg padd1  ub-pc"  style="border:solid;border-width:0.2em;background-color: #79C6EC; border-radius:0.3em;" data-name="customer" data-url="customer.html">
+                        <div class="apipicwh ub-img jmapi marg1"></div>
+                    </div>
+                    <div class="link ub-f1 ub ub-ver ub-ac wlbg padd1  ub-pc"  style="border:solid;border-width:0.2em;background-color: #AEE588; border-radius:0.3em;" data-name="sell" data-url="sell.html">
+                        <div class="apipicwh ub-img jmapi marg1"></div>
+                    </div>
+                </div>
+                <div class="link ub-f2 ub ub-ver ub-ac ub-pc uof" style="border:solid;border-width:0.2em;background-color: #F8DC7C; border-radius:0.3em;" data-name="account" data-url="account.html">
+                    <div class="ub-img xtapi apipicwh1 marg1"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+    <script src="js/appcan.js"></script>
+    <script src="js/appcan.control.js"></script>
+    <script src="js/appcan.slider.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            //appcan.initBounce();
+        });
+        appcan.button(".link", "ani-act", function() {
+            appcan.window.open($(this).data("name"), $(this).data("url"), 10);
+        })
+        var slider = appcan.slider({
+            selector : '#slider',
+            aspectRatio : 0,
+            hasLabel : true,
+            index : 0
+        });
+        slider.set([{
+            img : "index_content/css/myImg/main.png",
+            label : "主页"
+        }, {
+            img : "",
+            label : "111"
+        }, {
+            img : "",
+            label : ""
+        }, {
+            img : "",
+            label : ""
+        }, {
+            img : "",
+            label : ""
+        }])
+        slider.on("clickItem", function(index, data) {
+        })
+    </script>
+</html>

@@ -1,0 +1,125 @@
+.ele-homeImg{
+	background-image:url('myImg/elec-ad1.png');
+}
+.ele-search{
+	background-image:url('myImg/ele-seach.png');
+}
+.ele-sort1{
+	background-image:url('myImg/elecSort1.png');
+}
+.ele-sort2{
+	background-image:url('myImg/elecSort2.png');
+}
+.ele-sort3{
+	background-image:url('myImg/elecSort3.png');
+}
+.eleIcon1{
+	background-image:url('myImg/elec1.png');
+}
+.eleIcon2{
+	background-image:url('myImg/elec2.png');
+}
+.eleIcon3{
+	background-image:url('myImg/elec3.png');
+}
+.eleIcon4{
+	background-image:url('myImg/elec4.png');
+}
+.eleIcon5{
+	background-image:url('myImg/elec5.png');
+}
+.eleIcon6{
+	background-image:url('myImg/elec6.png');
+}
+.eleIcon7{
+	background-image:url('myImg/elec7.png');
+}
+.eleIcon8{
+	background-image:url('myImg/elec8.png');
+}
+.uh-ele1{
+	height:9.0625em;
+}
+.uh-ele2{
+	height:6.875em;
+}
+.uwh-ele1{
+	width:0.9em;
+	height:0.9375em;
+}
+.uwh-ele2{
+	width:2.75em;
+	height:2.75em;
+}
+.uc-a-ele1 {
+	-webkit-border-radius: 2.75em;
+	border-radius: 2.75em;
+}
+.c-wh-ele{
+	background-color:rgba(255,255,255,0.9);
+}
+.uinput input.ulev-ele{
+	font-size:0.8125em;
+}
+
+.umar-t-ele{
+	margin-top:0.9em;
+}
+.t-gra-ele{
+	color:#aaaaaa;
+}
+
+.t-org-ele{
+	color:#f78c3e;
+}
+.t-gre-ele{
+	color:#3dc700;
+}
+.uinn-ele2{
+	padding:0.14em 0.625em;
+}
+.umar-ar6{
+	margin-right:0.46875em;
+}
+.uc-a-for1{
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+}
+.c-gra-for2{
+	background-color:#767676;
+}
+.umar-r-for{
+	margin-right:0.25em;
+}
+.uwh-for1{
+	width:0.25em;
+	height:0.25em;
+}
+.uw-33{
+	width:33.33%;
+}
+.umar-ar6{
+    margin-right:0.46875em;
+}
+.umar-at1{
+    margin-top:0.625em;
+}
+.uinn-a7{
+    padding:0 0.625em;
+}
+.uinn-a11{
+    padding:0.625em 0;
+}
+.btn_wh1{
+    width:1.4em;
+    height:1.4em;
+}
+.uinn-a1{
+    padding:0.625em;
+}
+.ufm1{
+    font-family:Arial;
+}
+.ulev-app1{
+    font-size:0.875em;
+}
