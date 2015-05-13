@@ -12,7 +12,7 @@
 .sc-bg {
     background-color: #FFFFFF;
 }
-/*辅助控件背景颜色（如：审批意见输入框）*/
+/*辅助控件背景颜色（如：输入框）*/
 .sc-bg-active {
     background-color: #FFFFFF;
 }
@@ -31,6 +31,9 @@
 }
 /*辅助字体颜色（如：箭头）*/
 .sc-text {
+    color: #9F9F9F;
+}
+.sc-text1 {
     color: #9F9F9F;
 }
 /*辅助字体颜色-（如：忘记密码）*/
@@ -68,7 +71,7 @@
 }
 /*辅助按钮颜色*/
 .sc-btn {
-    background-color: #C2D84D;
+    background-color: RGB(249,185,51);
 }
 .size {
     font-size: .9em;

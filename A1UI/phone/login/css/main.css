@@ -90,23 +90,23 @@
 }
 ::-webkit-input-placeholder {/* WebKit browsers */
     color: #FFFFFF;
-    font-size: small;
+    font-size: .9em;
     font-weight: bold;
 }
 :-moz-placeholder {/* Mozilla Firefox 4 to 18 */
     color: #FFFFFF;
-    font-size: small;
+    font-size: .9em;
     font-weight: bold;
     opacity: 1;
 }
 ::-moz-placeholder {/* Mozilla Firefox 19+ */
     color: #FFFFFF;
-    font-size: small;
+    font-size: .9em;
     font-weight: bold;
     opacity: 1;
 }
 :-ms-input-placeholder {/* Internet Explorer 10+ */
     color: #FFFFFF;
-    font-size: small;
+    font-size: .9em;
     font-weight: bold;
 }

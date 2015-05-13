@@ -1,11 +1,11 @@
 .fs-s{
-    font-size: small;
+    font-size: .7em;
 }
 .fs-m{
-    font-size: medium;
+    font-size: 1em;
 }
 .fs-l{
-    font-size: large;
+    font-size: 1.5em;
 }
 .fw-b{
     font-weight: bold;

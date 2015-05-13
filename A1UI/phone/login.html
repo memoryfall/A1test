@@ -21,7 +21,7 @@
             <div class="ub ub-ver uinn-a3 ub-fv" style="min-height:4em;" >
                 <div class="ub ub-ver uinn uinn-at1" style="height:50%;">
                     <div class="ub">
-                        &nbsp;
+                        &nbsp;<br />&nbsp;
                     </div>
                     <div class="logo ub-img umhw2 umar-a"></div>
                     <p class="fs-s fw-b bc-text-head fw-b" style="text-align: center;">
@@ -34,22 +34,22 @@
                 <div class="umar-a" style="padding: 0.5em 0 0;">
                     <div class="ub ub-ac ubb umh5 bc-border uinput ub ub-f1">
                         <div class="resuser ub-img umhw1 umar-a"></div>
-                        <input placeholder="请输入账号" type="text" class="ub-f1">
+                        <input id="LoginAccout" name="LoginAccout" placeholder="请输入账号" type="text" class="ub-f1">
                     </div>
                     <div class="ub ub-ac ubb umh5 bc-border uinput ub ub-f1">
                         <div class="respwd ub-img umhw1 umar-a"></div>
-                        <input placeholder="请输入密码" type="password" class="ub-f1">
+                        <input id="LoginPassword" name="LoginPassword" placeholder="请输入密码" type="password" class="ub-f1">
                     </div>
                 </div>
                 <div class="ub ub-pe uinn-a6 sc-text-active ulev-4 fw-b bc-text-head" style="padding: 0 0 0.5em;">
                     忘记密码
                 </div>
-                <div class="ub ub-ver btn ub-ac bc-text-head ub-pc uc-a1 bc-head bc-text-head fs-l" style="font-weight: bold;border:solid;border-width:1px;border-radius:0.4em;border-color: #83BA41;" id="submit">
+                <div class="ub ub-ver btn ub-ac bc-text-head ub-pc uc-a1 bc-head bc-text-head fs-l" style="font-weight: bold;border:solid;border-width:.1em;border-radius:0.4em;border-color: #83BA41;" id="submit">
                     登录
                 </div>
                 <button type="submit" class="uinvisible"></button>
             </form>
-            <div class="metro re btn ub ub-ac bc-border bc-text-head ub-pc bc-bg uc-a1" style="color: #9F9F9F;font-size: normal;larger;font-weight: bold; border:solid;border-width:1px;border-radius:0.3em;border-color:#83BA41;" data-name="Register" data-url="register.html">
+            <div class="metro re btn ub ub-ac bc-border bc-text-head ub-pc bc-bg uc-a1" style="color: #9F9F9F;font-size: 1em;font-weight: bold; border:solid;border-width:.1em;border-radius:0.4em; border-color:#83BA41;" data-name="Register" data-url="register.html">
                 注册
             </div>
             <div class="uh ub" style="padding: 1em 0 0;">
@@ -69,7 +69,7 @@
     </body>
     <script>
         appcan.ready(function() {
-            appcan.initBounce();
+            //appcan.initBounce();
         });
         appcan.button(".metro", "ani-act", function() {
             appcan.window.open($(this).data("name"), $(this).data("url"), 10);

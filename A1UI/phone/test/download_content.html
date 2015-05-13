@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>             
+       
+       <div class="conbor uof">
+    <div class="consj"> 
+        <div class="ulev2 uin9">下载功能</div>
+        <div class="umh1"></div>
+        <div class="uin10">下载路径：<br />(推荐：'http://pic.pp3.cn/uploads//20121001j/bz/210.jpg')</div> 
+        
+        <!--<div class="ubb ubt bc-border bc-bg tcxx breakword" id="data">http://www.cnblogs.com/yzx99/archive/2008/08/22/1273858.html</div> -->
+        <div class="sc-bg-active uinput ub ub-f1  bc-border uba">
+            <input placeholder="请输入文件URL" type="text" class="ub-f1" id="loadUrl" >
+        </div>
+        <div class="umh1"></div>       
+        <div class="uin">
+            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="load">
+	下载
+           </div>
+           <div class="umh1"></div> 
+           <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn">
+	清除缓存
+           </div>
+
+
+        </div>
+        
+        <img id="imgShow" />
+        <div id="imgShow2" style="height:100px;width:200px;"></div>       
+        <div class="umh1"></div>
+        <div id="status" class="uhide">
+            <div class="uba  bc-border bc-bg  breakword umh1" >
+                <div class="umh1 bc-head"style="width: 0%" id="percentage"></div>
+            </div> 
+            <div class="umh1"></div>
+            <div id="per" class="tx-c">
+            0%
+            </div>
+        </div>                        
+    </div>
+</div>
+        <script src="../js/appcan.js"></script>  
+        <script src="../js/appcan.control.js"></script>
+    </body>
+    <script>    
+    var url = 'http://pic.pp3.cn/uploads//20121001j/bz/210.jpg';    
+    var downloadpath = 'http://pic.pp3.cn/uploads//20121001j/bz/210.jpg';
+    var savedPath = 'wgt://data/down/1284565196.jpg';
+    var cache;
+        appcan.ready(function() {
+            appcan.initBounce();
+        });
+                       
+        appcan.button("#load", "ani-act", function() { 
+            if (document.getElementById('loadUrl').value == "") {
+                downloadpath = 'http://pic.pp3.cn/uploads//20121001j/bz/210.jpg';
+                alert("您未输入文件URL,默认使用推荐URL.");
+            }else{ 
+                downloadpath = document.getElementById('loadUrl').value; 
+            }   
+            var sdata, statu = 0, percent = 0;
+            var option = {
+                maxtask: 3,
+                //url: 'http://www.cnblogs.com/yzx99/archive/2008/08/22/1273858.html',
+                url:downloadpath,
+                progress: function(data, session){
+                              //alert("data:"+JSON.stringify(data)+", \nsession:"+JSON.stringify(session));
+                              sdata = JSON.parse(JSON.stringify(data));
+                              statu = sdata['status'];
+                              percent = sdata['percent'];                             
+                              $('#status')[0].className = "uinn";  
+                              switch (statu) {
+                                  case 0:
+                                        $('#percentage').css("width",percent+"%");
+                                        $('#per').html(percent+"%");
+                                        if(parseInt(percent)==100){
+                                            $('#down').html('下载');
+                                            $('#status')[0].className="uhide";
+                   // isDown = false;
+                                        }
+                                        break;
+                                  case 1:
+                                        alert("下载完成");
+                                        $('#down').html('下载');
+                                        $('#status')[0].className="uhide";
+                                        //isDown = false;
+             //   uexDownloaderMgr.closeDownloader(opCode);
+             //   clearInfo();
+                                        break;
+                                  case 2:
+                                        alert("下载失败");
+                                        $('#down').html('下载');
+                                        $('#status')[0].className="uhide";
+              //  isDown = false;
+            //    uexDownloaderMgr.closeDownloader(opCode);
+                                        break;
+                                  default:
+            //    uexDownloaderMgr.closeDownloader(opCode);
+             //   isDown = false;
+                                        break;
+                            }
+              },
+              success: function(path, session){
+                  alert("path:"+path+", \nsession:"+JSON.stringify(session));
+                  alert("Download Success");
+              },
+              fail: function(session){
+                  alert("session:"+JSON.stringify(session));
+                  alert("Download Fail");
+              }
+                                                                         
+           }; 
+           cache = appcan.icache(option);
+           cache.run(option); 
+      });
+    
+      appcan.button(".btn", "ani-act", function() {
+           cache = appcan.icache();
+           cache.clearcache();
+           alert("Clear Success!");
+      })
+ </script>
+</html>

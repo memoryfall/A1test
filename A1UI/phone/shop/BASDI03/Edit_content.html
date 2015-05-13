@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/ui-box.css">
+        <link rel="stylesheet" href="../../css/ui-base.css">
+        <link rel="stylesheet" href="../../css/ui-color.css">
+        <link rel="stylesheet" href="../../css/appcan.icon.css">
+        <link rel="stylesheet" href="../../css/appcan.control.css">
+        <link rel="stylesheet" href="Edit_content/css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="c-gra1 uinn-a1 ub" style="background-color: RGB(238,205,209);">
+            <div class="ub-f1 ub ub-ver ub-ac ub-pc">
+                <div class="uwh-set3 pos_re">
+                    <div class="uwh-set3 uc-a-set3 ub-img setImg1"></div>
+                </div>
+                <div class="umar-at1">
+                    <span style="padding: 0 1em 0 0;">000</span><span style="padding: 0 0 0 1em;">李小白</span>
+                </div>
+            </div>
+        </div>
+        <div id="listview_switch"  class="ubt sc-border sc-bg"></div>
+    </body>
+    <script src="../../js/appcan.js"></script>
+    <script src="../../js/appcan.control.js"></script>
+    <script src="../../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var lv_switch = appcan.listview({
+            selector : "#listview_switch",
+            type : "thinLine",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : false,
+            hasId : false,
+            multiLine : 1,
+            hasControl : true
+        });
+        lv_switch.set([{
+            title : "公司信息",
+            "switchBtn" : {
+                mini : true,
+                value : true
+            }
+        }, {
+            title : "用户信息",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "用户权限",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "银行账号",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "供应商信息建立",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "共用参数",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "基本信息",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "商品信息簿",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "客户信息簿",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "供应商数据清单",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "进货簿",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "销货簿",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "存货簿",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "现金簿",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "支票簿",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "银行簿",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "应收账款簿",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "资金预估表",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "收支结余表",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "费用分析图",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "收支分析图",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "业绩分析图",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "利润分析图",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "应付账款簿",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "TOP10客户销售分析图",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "TOP10商品销售分析图",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "存货分析图",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "商品批量",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "微店下下载更新设定",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "快递类型查询",
+            "switchBtn" : {
+                mini : true,
+                value : false
+            }
+        }]);
+        lv1.on("switch:change", function(ele, obj) {
+            //  lv1.updateItem(ele,"title","Switch:"+obj.switchBtn.value);
+        })
+    </script>
+</html>

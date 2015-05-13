@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/ui-box.css">
+        <link rel="stylesheet" href="../../css/ui-base.css">
+        <link rel="stylesheet" href="../../css/ui-color.css">
+        <link rel="stylesheet" href="../../css/appcan.icon.css">
+        <link rel="stylesheet" href="../../css/appcan.control.css">
+        <link rel="stylesheet" href="echarts_content/css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <!--Step:1 Prepare a dom for ECharts which (must) has size (width & hight)-->
+        <!--Step:1 为ECharts准备一个具备大小（宽高）的Dom-->
+        <div id="main" style="height:90%;border:1px solid #ccc;padding:10px;"></div>
+
+        <!--Step:2 Import echarts.js-->
+        <!--Step:2 引入echarts.js-->
+        <script src="dist/echarts.js"></script>
+        <script>
+            appcan.ready(function() {
+                appcan.initBounce();
+            })
+        </script>
+        <script type="text/javascript">
+            // Step:3 conifg ECharts's path, link to echarts.js from current page.
+            // Step:3 为模块加载器配置echarts的路径，从当前页面链接到echarts.js，定义所需图表路径
+            require.config({
+                paths : {
+                    echarts : './dist'
+                }
+            });
+
+            // Step:4 require echarts and use it in the callback.
+            // Step:4 动态加载echarts然后在回调函数中开始使用，注意保持按需加载结构定义图表路径
+            require(['echarts', 'echarts/chart/bar', 'echarts/chart/line'], function(ec) {
+                //--- 折柱 ---
+                var myChart = ec.init(document.getElementById('main'));
+                myChart.setOption({
+                    tooltip : {
+                        trigger : 'axis'
+                    },
+                    legend : {
+                        data : ['收入', '支出']
+                    },
+                    toolbox : {
+                        show : true,
+                        feature : {
+                            mark : {
+                                show : true
+                            },
+                            dataView : {
+                                show : true,
+                                readOnly : false
+                            },
+                            magicType : {
+                                show : true,
+                                type : ['line', 'bar']
+                            },
+                            restore : {
+                                show : true
+                            },
+                            saveAsImage : {
+                                show : true
+                            }
+                        }
+                    },
+                    calculable : true,
+                    xAxis : [{
+                        type : 'category',
+                        boundaryGap : true,
+                        data : ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+                    }],
+                    yAxis : [{
+                        type : 'value',
+                        scale : true,
+                        axisLabel : {
+                            formatter : '{value}元'
+                        },
+                        splitArea : {
+                            show : false
+                        }
+                    }],
+                    series : [{
+                        name : '收入',
+                        type : 'line',
+                        data : [62, 60, 68, 62, 58, 60, 62, 58, 61, 59, 64, 65],
+                        markPoint : {
+                            data : [{
+                                type : 'max',
+                                name : '最大值'
+                            }, {
+                                type : 'min',
+                                name : '最小值'
+                            }]
+                        },
+                        markLine : {
+                            data : [{
+                                type : 'average',
+                                name : '平均值'
+                            }]
+                        }
+                    }, {
+                        name : '支出',
+                        type : 'line',
+                        data : [51, 47, 49, 55, 48, 57, 54, 51, 59, 53, 56, 56],
+                        markPoint : {
+                            data : [{
+                                type : 'max',
+                                name : '最大值'
+                            }, {
+                                type : 'min',
+                                name : '最小值'
+                            }]
+                        },
+                        markLine : {
+                            data : [{
+                                type : 'average',
+                                name : '平均值'
+                            }]
+                        }
+                    }]
+                });
+
+                window.onresize = function() {
+                    myChart.resize();
+                }
+            });
+        </script>
+        <script src="../../js/appcan.js"></script>
+        <script src="../../js/appcan.control.js"></script>
+        <script src="../../js/appcan.listview.js"></script>
+    </body>
+
+</html>
