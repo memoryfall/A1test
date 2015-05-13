@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{384E6EE9-E0E0-4176-9356-22BF8920E0DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "digiwin", "digiwin\digiwin.csproj", "{A3D67C6A-1AF1-47DF-B36D-677C04819C3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{384E6EE9-E0E0-4176-9356-22BF8920E0DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{384E6EE9-E0E0-4176-9356-22BF8920E0DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{384E6EE9-E0E0-4176-9356-22BF8920E0DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{384E6EE9-E0E0-4176-9356-22BF8920E0DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D67C6A-1AF1-47DF-B36D-677C04819C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D67C6A-1AF1-47DF-B36D-677C04819C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D67C6A-1AF1-47DF-B36D-677C04819C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D67C6A-1AF1-47DF-B36D-677C04819C3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
