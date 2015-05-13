@@ -6,3 +6,4 @@ first commit test from lujian
 学习node.js与js开发知识
 学习MVC4 WEB API，编写了简单的测试；
 实现本地数据库的数据存储
+实现由于网络原因的提交失败，进行本地数据存储，下次数据自动载入；
