@@ -1,0 +1,3 @@
+工作记录：
+5月1-5月7号都在看java+tomca+axis2
+5月9号-     再看.NET+webapi

@@ -4,18 +4,20 @@ function Login(){
     if(userName==""||userPwd==""){
         alert("请将信息填写完整！");
     }else{
-        var url="http://localhost:2137/WebService1.asmx/Login";
-        appcan.request.getJSON(url,{name:userName,password:userPwd,status:0},function(data){
-            if(data.user[0]["status"]=="true"){
-                alert("登录成功！");
-                appcan.window.open({
-                    name:'maintest',
-                    data:'maintest.html',
-                    aniId:2,
-                })
-            }else{
-                alert("登陆失败，请核对信息是否正确！");
-            }
+       // var url="http://localhost:2137/WebService1.asmx/Login";
+        var url="http://localhost:8080/helloweb/services/aaaaa";
+        appcan.request.getJSON(url,{name:userName,pwd:userPwd},function(data){
+            // if(data.user[0]["status"]=="true"){
+                // alert("登录成功！");
+                // appcan.window.open({
+                    // name:'maintest',
+                    // data:'maintest.html',
+                    // aniId:2,
+                // })
+            // }else{
+                // alert("登陆失败，请核对信息是否正确！");
+            // }
+            alert("ss");
         })
     }
 }
