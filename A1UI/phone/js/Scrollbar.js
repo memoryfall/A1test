@@ -3,7 +3,7 @@ function Scrollbar() {
         total : 0, //数据总数
         pos : 0, //当前滚动位置
         itemSize : 20, //单项尺寸
-        barsize : 350, //控件尺寸
+        barsize : 250, //控件尺寸
     };
 }
 
