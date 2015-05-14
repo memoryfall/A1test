@@ -14,7 +14,8 @@
 var myScroll,
     pullDownEl, pullDownOffset,
     pullUpEl, pullUpOffset,
-    generatedCount = 0;
+    generatedUpCount = 0,
+    generatedDownCount = 0;
 
 function pullDownAction () {
     setTimeout(function () {    // <-- Simulate network congestion, remove setTimeout from production!
@@ -23,7 +24,7 @@ function pullDownAction () {
 
         for (i=0; i<3; i++) {
             li = document.createElement('li');
-            li.innerText = 'Generated row ' + (++generatedCount);
+            li.innerText = 'Generated up row ' + (++generatedUpCount);
             el.insertBefore(li, el.childNodes[0]);
         }
         
@@ -38,7 +39,7 @@ function pullUpAction () {
 
         for (i=0; i<3; i++) {
             li = document.createElement('li');
-            li.innerText = 'Generated up row ' + (++generatedCount);
+            li.innerText = 'Generated down row ' + (++generatedDownCount);
             el.appendChild(li, el.childNodes[0]);
         }
         
@@ -156,7 +157,7 @@ body {
 
 #wrapper {
     position:absolute; z-index:1;
-    top:0; bottom:48px; left:-9999px;
+    top:0px; bottom:0px; left:-9999px;
     width:100%;
     background:#aaa;
     overflow:auto;
@@ -280,33 +281,12 @@ body {
             <li>Pretty row 18</li>
             <li>Pretty row 19</li>
             <li>Pretty row 20</li>
-            <li>Pretty row 21</li>
-            <li>Pretty row 22</li>
-            <li>Pretty row 23</li>
-            <li>Pretty row 24</li>
-            <li>Pretty row 25</li>
-            <li>Pretty row 26</li>
-            <li>Pretty row 27</li>
-            <li>Pretty row 28</li>
-            <li>Pretty row 29</li>
-            <li>Pretty row 30</li>
-            <li>Pretty row 31</li>
-            <li>Pretty row 32</li>
-            <li>Pretty row 33</li>
-            <li>Pretty row 34</li>
-            <li>Pretty row 35</li>
-            <li>Pretty row 36</li>
-            <li>Pretty row 37</li>
-            <li>Pretty row 38</li>
-            <li>Pretty row 39</li>
-            <li>Pretty row 40</li>
         </ul>
         <div id="pullUp">
             <span class="pullUpIcon"></span><span class="pullUpLabel">Pull up to refresh...</span>
         </div>
     </div>
 </div>
-<div id="footer"></div>
 
 </body>
 </html>
