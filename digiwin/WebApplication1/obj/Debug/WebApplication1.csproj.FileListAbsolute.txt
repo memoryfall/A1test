@@ -1,6 +1,0 @@
-D:\digiwin\A1servertest\digiwin\WebApplication1\bin\WebApplication1.dll.config
-D:\digiwin\A1servertest\digiwin\WebApplication1\bin\WebApplication1.dll
-D:\digiwin\A1servertest\digiwin\WebApplication1\bin\WebApplication1.pdb
-D:\digiwin\A1servertest\digiwin\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
-D:\digiwin\A1servertest\digiwin\WebApplication1\obj\Debug\WebApplication1.dll
-D:\digiwin\A1servertest\digiwin\WebApplication1\obj\Debug\WebApplication1.pdb
