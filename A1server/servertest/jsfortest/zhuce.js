@@ -9,43 +9,66 @@ function rejist(){
     }else if(passWord!=rePwd){
         alert("两次输入的密码不一致！");
     }else{
-        var mydata={userName:Name,userPass:passWord};
+         var mydata={userName:Name,userPass:passWord};
+         
        appcan.request.ajax({
             type:'POST',
+            // url:'http://192.168.100.139/A1WebSite/webapi',
             url:'http://localhost:32591/api/test/post',
+            // data:{
+                // Method:'Login',
+                // LoginAccout:'ss',
+                // LoginPassword:'sss'
+            // },
             data:mydata,
             dataType:'json',
             timeout:300,
             success:function(data){
                if(data==true){
-                   alert("注册成功！");
+                   alert("注册成功！");           
                    appcan.window.open({
-                       name:'logintest',
-                       data:'logintest.html',
-                       aniId:2,
+                   name:'logintest',
+                   data:'logintest.html',
+                   aniId:2,
                    })
                }
+                 //createDB();
+                 // createTable();
+                  //transaction();
+                  //insertData(Email,Name,passWord,rePwd);
+                  
+                 // updateData(Email,Name,passWord,rePwd);
+                 // selectData();
+                 // closeDataBase();
+                // createDB();
+                // createTable();
+             // alert(data);
             },
             error:function(xhr,type){
                 alert("网络连接错误！");
-                createDB();
-                createTable();
-                insertData(Email,Name,passWord,rePwd);
-                updateData(Email,Name,passWord,rePwd);
-                closeDataBase();
+                // createDB();
+                // createTable();
+                // transaction();
+                // transaction();
+                //insertData(Email,Name,passWord,rePwd);
+                //selectData();
+                // updateData(Email,Name,passWord,rePwd);
+                //selectData();
+                // closeDataBase();
             },
             offline:true
         })
     }
 }
 function initData(){
-    createDB();
-    selectData();
-    closeDataBase();
+    // createDB();
+    // selectData();
+//    
 }
 function createDB(){
-    uexDataBaseMgr.openDataBase('rejistinfo',1);
-    // uexDataBaseMgr.cbOpenDataBase=createDBCallback;
+    
+    uexDataBaseMgr.openDataBase('dbtest',5);
+     uexDataBaseMgr.cbOpenDataBase=createDBCallback;
 }
 function createDBCallback(opid,type,data){
     if(data==0){
@@ -55,9 +78,9 @@ function createDBCallback(opid,type,data){
     }
 }
 function createTable(){
-    var sql='create table rejist(id int primary key,email nvarchar(20),name nvarchar(20),pwd nvarchar(20),repwd nvarchar(20))';
-    uexDataBaseMgr.executeSql('rejistinfo',1,sql);
-    // uexDataBaseMgr.cbExecuteSql=createTableCallback;
+    var sql='create table test(id int primary key,email nvarchar(20),name nvarchar(20),pwd nvarchar(20),repwd nvarchar(20))';
+    uexDataBaseMgr.executeSql('dbtest',5,sql);
+     uexDataBaseMgr.cbExecuteSql=createTableCallback;
 }
 function createTableCallback(opid,type,data){
     if(data==0){
@@ -67,9 +90,9 @@ function createTableCallback(opid,type,data){
     }
 }
 function insertData(email,name,password,repwd){
-    var sql='insert into rejist values('+1+",'"+email+"','"+name+"','"+password+"','"+repwd+"')";
-    uexDataBaseMgr.executeSql('rejist',1,sql);
-    // uexDataBaseMgr.cbExecuteSql=insertDataCallback;
+    var sql='insert into test values('+1+",'"+email+"','"+name+"','"+password+"','"+repwd+"')";
+    uexDataBaseMgr.executeSql('test',5,sql);
+     uexDataBaseMgr.cbExecuteSql=insertDataCallback;
 }
 function insertDataCallback(opid,type,data){
     if(data==0){
@@ -80,9 +103,9 @@ function insertDataCallback(opid,type,data){
 }
 
 function updateData(email, name, password, repwd) {
-    var sql = 'update rejist set email=' + "'" + email + "',name='" + name + "',pwd='" + password + "',repwd='" + repwd + "' where id=1";
-    uexDataBaseMgr.executeSql('rejistinfo', 1, sql);
-    // uexDataBaseMgr.cbExecuteSql = updateDataCallBack;
+    var sql = 'update test set email=' + "'" + email + "',name='" + name + "',pwd='" + password + "',repwd='" + repwd + "' where id=1";
+    uexDataBaseMgr.executeSql('dbtest', 5, sql);
+     uexDataBaseMgr.cbExecuteSql = updateDataCallBack;
 }
 
 function updateDataCallBack(opid,type,data){
@@ -94,8 +117,8 @@ function updateDataCallBack(opid,type,data){
     }
 
 function selectData(){
-        var sql = "SELECT * FROM rejist";
-        uexDataBaseMgr.selectSql('rejistinfo',1,sql);
+        var sql = "SELECT * FROM test";
+        uexDataBaseMgr.selectSql('dbtest',5,sql);
         uexDataBaseMgr.cbSelectSql = selectDataCallBack;
     }
     function selectDataCallBack(opid,type,value){
@@ -103,23 +126,28 @@ function selectData(){
                 var jsonList=eval("("+value+")");
                 if(jsonList.length == 0){
                     alert("无数据");
-                }else{
-                    document.getElementById("email").value=jsonList[0]["email"];
-                    document.getElementById("name").value=jsonList[0]["name"];
-                    document.getElementById("password").value=jsonList[0]["pwd"];
-                    document.getElementById("rePwd").value=jsonList[0]["repwd"];
-                }
-                
+                 }
+                 //else{
+                    // document.getElementById("email").value=jsonList[0]["email"];
+                    // document.getElementById("name").value=jsonList[0]["name"];
+                    // document.getElementById("password").value=jsonList[0]["pwd"];
+                    // document.getElementById("rePwd").value=jsonList[0]["repwd"];
+                // }
+                 for(var i=0;i<jsonList.length;i++){
+ 　　　　               for(var key in jsonList[i]){
+         　　         alert("key："+key+",value："+jsonList[i][key]); 
+                    }   
+                } 
             }else{
                 alert("查询失败！");
             }
     }
 function transaction(){
-    uexDataBaseMgr.transaction('rejistinfo',1,inFunc)
+    uexDataBaseMgr.transaction('dbtest',5,inFunc)
 }
 function inFunc(){
-    var sql='delete from rejist';
-    uexDataBaseMgr.executeSql('rejist',1,sql);
+    var sql='delete from test';
+    uexDataBaseMgr.executeSql('dbtest',5,sql);
     uexDataBaseMgr.cbTransaction=transactionCallback;
 }
 function transactionCallback(opid,type,data){
@@ -130,8 +158,9 @@ function transactionCallback(opid,type,data){
     }
 }
 function closeDataBase() {
-    uexDataBaseMgr.closeDataBase('rejistinfo', 1);
-    // uexDataBaseMgr.cbCloseDataBase = cbCloseDataBase;
+     uexDataBaseMgr.closeDataBase('dbtest', 5);
+     uexDataBaseMgr.cbCloseDataBase = cbCloseDataBase;
+     
 }
 
 function cbCloseDataBase(opid, type, data) {
