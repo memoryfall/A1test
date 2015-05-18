@@ -21,22 +21,25 @@ function Login(){
          appcan.request.ajax({
             type:'GET',
             url:'http://localhost:32591/api/test/get',
-            data:{
-                name:userName,
-                password:userPwd,
-            },
+            // data:{
+                // name:userName,
+                // password:userPwd,
+            // },
             dataType:'json',
             timeout:300,
             success:function(data){
-               if(data==true){
-                   alert("登录成功！");
-                   appcan.window.open({
-                       name:'main',
-                       data:'main.html',
-                       aniId:2,
-                   })
-               }else{
-                   alert("登录失败！");
+               // if(data==true){
+                   // alert("登录成功！");
+                   // appcan.window.open({
+                       // name:'main',
+                       // data:'main.html',
+                       // aniId:2,
+                   // })
+               // }else{
+                   // alert("登录失败！");
+               // }
+               for(var i=0;i<data.length;i++){
+                   alert("第"+(i+1)+"个用户信息："+"\nID:"+data[i].userId+"  账号："+data[i].userName+"  密码为："+data[i].userPass);
                }
             },
             error:function(xhr,type){
@@ -60,18 +63,18 @@ function Login(){
         // alert("数据库打开失败!");
     // }
 // }
-function insertData(name,password){
-    var sql='insert into user values('+"'"+name+"','"+password+"')";
-    uexDataBaseMgr.executeSql('userinfo',1,sql);
-    uexDataBaseMgr.cbExecuteSql=insertDataCallback;
-}
-function insertDataCallback(opid,type,data){
-    if(data==0){
-        alert("插入数据成功");
-    }else{
-        alert("插入数据失败！");
-    }
-}
+// function insertData(name,password){
+    // var sql='insert into user values('+"'"+name+"','"+password+"')";
+    // uexDataBaseMgr.executeSql('userinfo',1,sql);
+    // uexDataBaseMgr.cbExecuteSql=insertDataCallback;
+// }
+// function insertDataCallback(opid,type,data){
+    // if(data==0){
+        // alert("插入数据成功");
+    // }else{
+        // alert("插入数据失败！");
+    // }
+// }
 // function createTable(){
     // var sql='create table user(name nvarchar(20),password nvarchar(20))';
     // uexDataBaseMgr.executeSql('userinfo',1,sql);
@@ -84,22 +87,22 @@ function insertDataCallback(opid,type,data){
         // alert("创建表失败！");
     // }
 // }
-function transaction(){
-    uexDataBaseMgr.transaction('userinfo',1,inFunc)
-}
-function inFunc(){
-    var sql='delete from user';
-    uexDataBaseMgr.executeSql('userinfo',1,sql);
-    uexDataBaseMgr.cbTransaction=transactionCallback;
-}
-function transactionCallback(opid,type,data){
-    if(data==0){
-        alert("清空成功");
-    }else{
-        alert("清空失败");
-    }
-}
-// function selectData(){
+// function transaction(){
+    // uexDataBaseMgr.transaction('userinfo',1,inFunc)
+// }
+// function inFunc(){
+    // var sql='delete from user';
+    // uexDataBaseMgr.executeSql('userinfo',1,sql);
+    // uexDataBaseMgr.cbTransaction=transactionCallback;
+// }
+// function transactionCallback(opid,type,data){
+    // if(data==0){
+        // alert("清空成功");
+    // }else{
+        // alert("清空失败");
+    // }
+// }
+ // function selectData(){
         // var sql = "SELECT * FROM user";
         // uexDataBaseMgr.selectSql('userinfo',1,sql);
         // uexDataBaseMgr.cbSelectSql = selectDataCallback;
