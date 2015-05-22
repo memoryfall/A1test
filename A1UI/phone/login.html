@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="css/base.css">
         <script src="js/appcan.js"></script>
         <script src="js/appcan.control.js"></script>
+        <script src="functionJS/login.js"></script>
+        <script src="DBUtil/dbUtil.js"></script>
     </head>
     <body class="um-vp bc-bg bg-image" ontouchstart>
         <div style="padding: 0 1.5em;">
@@ -74,13 +76,14 @@
             appcan.window.open($(this).data("name"), $(this).data("url"), 10);
         });
         appcan.button("#submit", "ani-act", function() {
-            $("form").submit();
-            appcan.window.open({
-                name : "index",
-                dataType : 0,
-                aniId : 8,
-                data : "index.html",
-            });
+            // $("form").submit();
+            // appcan.window.open(
+                // name : "index",
+                // dataType : 0,
+                // aniId : 8,
+                // data : "index.html",
+            // });
+            Login();
         })
         appcan.button(".btn", "ani-act", function() {
             //$("form").submit();
