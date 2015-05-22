@@ -56,6 +56,7 @@ function selectData(DBname,DBid,sqlExcute,selectDataCallback){
     uexDataBaseMgr.selectSql(DBname,DBid,sql);
     uexDataBaseMgr.cbSelectSql=selectDataCallback;
 }
+
 // function selectDataCallback(opid,type,value){
     // if(type==1){//选择操作成功
 //         

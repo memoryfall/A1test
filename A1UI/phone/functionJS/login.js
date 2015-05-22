@@ -39,8 +39,14 @@ function Login(){
                     localStorage.setItem("TenantId",data.Data.TenantId);
                     localStorage.setItem("UserId",data.Data.UserId);
                     localStorage.setItem("RoleId",data.Data.RoleId);
+                    appcan.window.open({
+                        name:'index',
+                        data:'index.html',
+                        aniId:2
+                    })
+                }else{
+                    alert("输入的信息有误,请核对!");
                 }
-
             },
             error:function(xhr,type){
                 alert("网络错误！");
