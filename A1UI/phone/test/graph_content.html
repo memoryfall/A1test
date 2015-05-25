@@ -21,14 +21,13 @@
         <script src="../js/appcan.control.js"></script>
         <script src="../js/Chart.js"></script>
         <script src="../js/jquery.min.js"></script>
+        <script src="../mymodel/graphmodel.js"></script>
+        <script src="../mymodel/getgraph.js"></script>
     </body>
+    
     <script>
-        var randomScalingFactor = function() {
-            return Math.round(Math.random() * 100)
-        };
-        var randomColorFactor = function() {
-            return Math.round(Math.random() * 255)
-        };
+    
+    
 
         var lineChartData = {
             labels : ["January", "February", "March", "April", "May", "June", "July"],
@@ -40,7 +39,7 @@
                 pointStrokeColor : "#fff",
                 pointHighlightFill : "#fff",
                 pointHighlightStroke : "rgba(220,220,220,1)",
-                data : [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+                data : [getgraphdata(), getgraphdata(), getgraphdata(), getgraphdata(), getgraphdata(), randomScalingFactor(), getgraphdata()]
             }, {
                 label : "My Second dataset",
                 fillColor : "rgba(151,187,205,0.2)",
