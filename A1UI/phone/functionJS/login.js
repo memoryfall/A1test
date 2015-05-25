@@ -22,7 +22,7 @@ function Login(){
                     var count = 1;
                     createDB(DBname, DBid, cbCreatDB);
                     if (count == 1) {
-                        var sqlExcute = 'create table UserInfo(u_Account nvarchar(50) primary key,u_Password nvarchar(50),TenantId int,UserId int,RoleId int)';
+                        var sqlExcute = 'create table UserInfo(u_Account nvarchar(50) not null unique,u_Password nvarchar(50),TenantId int,UserId int,RoleId int)';
                         createTable(DBname, DBid, sqlExcute, createTableCallback);
                         count += 1;
                     }
@@ -39,6 +39,7 @@ function Login(){
                     localStorage.setItem("TenantId",data.Data.TenantId);
                     localStorage.setItem("UserId",data.Data.UserId);
                     localStorage.setItem("RoleId",data.Data.RoleId);
+                    
                     appcan.window.open({
                         name:'index',
                         data:'index.html',
