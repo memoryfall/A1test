@@ -1,16 +1,26 @@
 .LOG
-first commit test from linxinyi
+
+first commit test from lizhangxing
+
 test
 新报表形式
 
-17:50 2015/4/29
+
+
+17:50 2015/4/29_
 A1UI_biao.html_修改了报表页面
 
+
+
 18:28 2015/5/4
-A1UI_biao_content.html_修改报表
+_A1UI_biao_content.html_修改报表
+
+
 
 18:32 2015/5/5
 未作修改
+
+
 
 18:01 2015/5/6
 A1UI_新增注册页面
@@ -18,17 +28,32 @@ A1UI_新增注册页面
 11:33 2015/5/11
 A1UI_框架确立
 
+
+
 17:03 2015/5/11
 A1UI_shop_页面确立
 
+
+
 18:25 2015/5/11_A1UI_shop_店铺信息维护页面
+
+
 
 18:38 2015/5/12_A1UI_shop&test_测试图形报表页面
 
+
+
 9:31 2015/5/13_A1UI_修复
+
+
 
 18:20 2015/5/13_A1UI_测试
 
+
+
 18:47 2015/5/14_A1UI_测试下滑刷新
 
+
+
 18:21 2015/5/18_A1UI_测试
+
