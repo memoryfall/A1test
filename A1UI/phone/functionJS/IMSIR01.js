@@ -1,4 +1,4 @@
-function IMSIR01() {
+ï»¿function IMSIR01() {
     appcan.request.ajax({
         type : 'POST',
         url : 'http://180.153.139.167:8080/webapi',
@@ -13,13 +13,15 @@ function IMSIR01() {
         timeout : 300,
         success : function(data) {
             if (data.Error == "") {
+                alert(data.Data.DataTable[0].DEA001);
+                
                 
             } else {
-                alert("ÊäÈëµÄĞÅÏ¢ÓĞÎó,ÇëºË¶Ô!");
+                alert("è¾“å…¥çš„ä¿¡æ¯æœ‰è¯¯,è¯·æ ¸å¯¹!");
             }
         },
         error : function(xhr, type) {
-            alert("ÍøÂç´íÎó£¡");
+            alert("ç½‘ç»œé”™è¯¯ï¼");
         },
         offline : true
     })

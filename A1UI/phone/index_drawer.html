@@ -24,22 +24,55 @@
             }
         </style>
     </head>
-    <body class="um-vp bc-bg" ontouchstart>
-        <div id="page_0" class="up ub ub-ver bc-bg uhide" tabindex="0">
-            <div class="ub ub-ver ub-fv">
-                <div id="header" class="uh bc-text-head ub bc-head"></div>
-            <div id="content" class="ub-f1 tx-l shadow drawer" style="height: 100%;">
-                <div class="ub bc-text ulev2 ub-ac uinn1">
-                    设置
+    <body class="um-vp drawer2-bg">
+        <div id="page_0" class="ub uhide">
+            <div id="left" class="ub ub-ver ub-f1 bc-text-head ub-img3 drawer2-bg ub-fv  tx-l shadow drawer">
+                <div id="header" class="uh">
+                    <div class="uinn-hcontent">
+                        <div class="tx-c ubb-header uinn-header">
+                            自定
+                        </div>
+                    </div>
                 </div>
-                <div id="listview"  class="ubt bc-border sc-bg" style="right: .5em;top: .2em;"></div>
+                <div id="content" class="ub-f1">
+                    <div class="utra bc-text-head" id="left_content">
+                        <div class="ub ub-pc uinn-lrcontent">
+                            <div class="ub ub-ver ub-f1 uinn-lrcontent">
+                                <div id="content1" class="ub-f1">
+                                    <div class="ubb-header uinn-tblist ub ub-ac">
+                                        <!-- <div class="res-hassubscribe ub-img umwh-icons"></div> -->
+                                        <div class="ulev-list">
+                                            店铺
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content1" class="ub-f1">
+                                    <div class="ubb-header uinn-tblist ub ub-ac">
+                                        <!-- <div class="res-news ub-img umwh-icons"></div> -->
+                                        <div class="ulev-list">
+                                            设置
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;">
+                                    <div class="res-subscribe ub-img umwh-icons"></div>
+                                    <div class="t-ef6 umar-r umar-l">
+                                        订阅
+                                    </div>
+                                    <div class="res-doublearrow ub-img umwh-icons"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>  
+        </div>
     </body>
     <script>
         appcan.ready(function() {
             appcan.window.open("index", "index.html", 10, 256);
-            //订阅main_window_open频道，如果有消息发给该频道，则会执行响应的回调 
+            //订阅main_window_open频道，如果有消息发给该频道，则会执行响应的回调
             appcan.window.subscribe("main_window_open", function() {
                 //1秒后执行撤销隐藏
                 setTimeout(function() {
@@ -50,29 +83,13 @@
                 appcan.window.close(-1);
             });
         });
-        var lv = appcan.listview({
-            selector : "#listview",
-            type : "thinLine",
-            hasAngle : true
-        });
-        lv.set([{
-            name : "111",
-            title : "店铺",
-            id : "1",
-            url : "index.html"
-        }, {
-            name : "112",
-            title : "店铺",
-            id : "1",
-            url : "index.html"
-        }, {
-            name : "Login",
-            title : "登录",
-            id : "login",
-            url : "login.html"
-        }])
-        lv.on("click", function(ele, obj, curEle) {
-            appcan.window.open(obj.name, obj.url, 10, 256);
+        var test = document.getElementById("content1");
+        for (var i = 0; i < 5; i++) {
+            test.innerHTML += '<div class="link ubb-header uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;"><div class="ulev-1">店铺' + i + '</div></div>';
+        }
+
+        appcan.button(".link", "btn-act", function() {appcan.window.close('index');
+            appcan.window.open('index', 'index.html', 10, 256);
             appcan.window.subscribe("main_window_open", function() {
                 setTimeout(function() {
                     $("#page_0").removeClass("uhide");
@@ -82,6 +99,5 @@
                 appcan.window.close(-1);
             });
         })
-
     </script>
 </html>

@@ -32,7 +32,7 @@
         <script src="../js/appcan.control.js"></script>
     </body>
     <script>
-        appcan.ready(function() {
+        appcan.ready(function() {appcan.locStorage.setVal('color','color');
             var titHeight = $('#header').offset().height;
             appcan.frame.open("content", "mytest_content.html", 0, titHeight);
             window.onorientationchange = window.onresize = function() {

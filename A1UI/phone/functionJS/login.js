@@ -1,8 +1,8 @@
-function Login(){
+ï»¿function Login(){
     var account=$("#LoginAccout").val();
     var pass=$("#LoginPassword").val();
     if(account==""||pass==""){
-        alert("ÊäÈëĞÅÏ¢²»ÍêÕû£¬ÇëÖØĞÂÊäÈë£¡");
+        alert("è¾“å…¥ä¿¡æ¯ä¸å®Œæ•´ï¼Œè¯·é‡æ–°è¾“å…¥ï¼");
     }else{
         appcan.request.ajax({
             type:'POST',
@@ -45,48 +45,48 @@ function Login(){
                         aniId:2
                     })
                 }else{
-                    alert("ÊäÈëµÄĞÅÏ¢ÓĞÎó,ÇëºË¶Ô!");
+                    alert("è¾“å…¥çš„ä¿¡æ¯æœ‰è¯¯,è¯·æ ¸å¯¹!");
                 }
             },
             error:function(xhr,type){
-                alert("ÍøÂç´íÎó£¡");
+                alert("ç½‘ç»œé”™è¯¯ï¼");
             },
             offline:true
         })
     }
 }
-//=================================´´½¨Êı¾İ¿â»Øµ÷º¯Êı
+//=================================åˆ›å»ºæ•°æ®åº“å›è°ƒå‡½æ•°
 function cbCreatDB(opid,type,data){
     if(data==0){
-        alert("Êı¾İ¿â´ò¿ª³É¹¦");
+        alert("æ•°æ®åº“æ‰“å¼€æˆåŠŸ");
         
     }else{
-        alert("Êı¾İ¿â´ò¿ªÊ§°Ü");
+        alert("æ•°æ®åº“æ‰“å¼€å¤±è´¥");
     }
 }
-//=================================´´½¨±í»Øµ÷º¯Êı
+//=================================åˆ›å»ºè¡¨å›è°ƒå‡½æ•°
 function createTableCallback(opid,type,data){
     if(data==0){
-        alert("±í´´½¨³É¹¦");
+        alert("è¡¨åˆ›å»ºæˆåŠŸ");
     }else{
-        alert('±í´´½¨Ê§°Ü');
+        alert('è¡¨åˆ›å»ºå¤±è´¥');
     }
 }
-//================================²åÈëÊı¾İ»Øµ÷º¯Êı
+//================================æ’å…¥æ•°æ®å›è°ƒå‡½æ•°
 function insertDataCallback(opid,type,data){
     if(data==0){
-        alert("Êı¾İ²åÈë³É¹¦£¡");
+        alert("æ•°æ®æ’å…¥æˆåŠŸï¼");
     }else{
-        alert("Êı¾İ²åÈëÊ§°Ü£¡");
+        alert("æ•°æ®æ’å…¥å¤±è´¥ï¼");
     }
 }
-//===============================É¸Ñ¡Êı¾İ»Øµ÷º¯Êı
+//===============================ç­›é€‰æ•°æ®å›è°ƒå‡½æ•°
 function selectDataCallback(opid,type,value){
    
     if (type == 1) {
         var jsonList = eval("(" + value + ")");
         if (jsonList.length == 0) {
-            alert("ÎŞÊı¾İ");
+            alert("æ— æ•°æ®");
         }
         for (var i = 0; i < jsonList.length; i++) {
             for(var key in jsonList[i]){
@@ -94,7 +94,7 @@ function selectDataCallback(opid,type,value){
             }
         }
     } else {
-        alert("²éÑ¯Ê§°Ü£¡");
+        alert("æŸ¥è¯¢å¤±è´¥ï¼");
     }
 
 }

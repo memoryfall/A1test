@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="dd_drawer/css/main.css">
+        <style>
+            .drawer {
+                margin-right: 4em;
+            }
+            .shadow {
+                -webkit-box-shadow: inset -4px 1px 3px rgba(0, 0, 0, .2);
+                box-shadow: inset -4px 1px 3px rgba(0, 0, 0, .2)
+            }
+        </style>
+    </head>
+    <body class="um-vp ">
+	<div id="page_0" class="ub uhide">
+		<div id="left" class="ub ub-ver ub-f1 bc-text-head ub-img3 drawer2-bg ub-fv  tx-l shadow drawer">
+			<div id="header" class="uh">
+				<div class="uinn-hcontent">
+					<div class="tx-c ubb-header uinn-header">自定产品</div>
+				</div>
+			</div>
+			<div id="content" class="ub-f1">
+				<div class="utra bc-text-head" id="left_content">
+					<div class="ub ub-pc uinn-lrcontent">
+						<div class="ub ub-ver ub-f1 uinn-lrcontent">
+							<div class="ubb-header uinn-tblist ub ub-ac">
+								<div class="res-hassubscribe ub-img umwh-icons"></div>
+								<div class="ulev-list">订阅</div>
+							</div>
+							<div class="ubb-header uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;">
+								<div class="ulev-1">财经新闻</div>
+							</div>
+							<div class="ubb-header uinn-tbinlist  ub ub-ac ub-pc">
+								<div class="ulev-1">科技动态</div>
+							</div>
+							<div class="ubb-header uinn-tblist ub ub-ac">
+								<div class="res-news ub-img umwh-icons"></div>
+								<div class="ulev-list">新闻资讯</div>
+							</div>
+							<div class="ubb-header uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;">
+								<div class="ulev-1">政治要闻</div>
+							</div>
+							<div class="ubb-header uinn-tbinlist  ub ub-ac ub-pc">
+								<div class="ulev-1">领导决策</div>
+							</div>
+							<div class="ubb-header uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;">
+								<div class="ulev-1">财经新闻</div>
+							</div>
+							<div class="ubb-header uinn-tbinlist  ub ub-ac ub-pc">
+								<div class="ulev-1">体育新闻</div>
+							</div>
+							<div class="ubb-header uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;">
+								<div class="ulev-1">娱乐新闻</div>
+							</div>
+							<div class="uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;">
+								<div class="res-subscribe ub-img umwh-icons"></div>
+								<div class="t-ef6 umar-r umar-l">订阅</div>
+								<div class="res-doublearrow ub-img umwh-icons"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.window.open("dd", "dd.html", 10, 256);
+            appcan.window.subscribe("main_window_open", function() {
+                setTimeout(function() {
+                    $("#page_0").removeClass("uhide");
+                }, 1000);
+            })
+            appcan.window.subscribe("draw_close", function() {
+                appcan.window.close(-1);
+            });
+        });
+</script>
+</html>
