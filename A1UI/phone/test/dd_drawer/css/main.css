@@ -1,0 +1,73 @@
+.drawer2-bg{
+	background-image:url(images/drawer2-bg.png);
+}
+.res-bodybg{
+	background-image:url(images/bodybg.png);
+}
+.res-doublearrow{
+	background-image:url(images/doublearrow.png);
+}
+.ut-sbody{
+	-webkit-box-shadow:-20px 0px 20px rgba(63,66,72,1) inset;
+	box-shadow:-20px 0px 20px rgba(63,66,72,1) inset;
+}
+.uinn-header{
+	padding-top:0.8em;
+	padding-bottom:0.6em;
+}
+.uinn-hcontent{
+	padding:0.5em 0.5em 0;
+}
+.uinn-lrcontent{
+	padding:0 0.5em;
+}
+.ubb-header{
+	border-bottom:1px solid #5b5b5b;
+}
+.uinn-tlist{
+	
+}
+.uinn-tblist{
+	padding-top:0.7em;
+	padding-bottom:0.7em;
+}
+.uinn-tbinlist{
+	padding-top:0.9em;
+	padding-bottom:0.9em;
+}
+.ulev-list{
+	font-size:0.9em;
+}
+.t-ef6{
+	color:#ef6413;
+}
+.uinn-weather{
+	padding:1em;
+}
+
+.umw-weather{
+	min-width:3em;
+	min-height:3em;
+}
+.umwh-icons{
+	min-height:1.6em;
+	min-width:1.6em;
+}
+.umwh-addmore{
+	min-height:1.8em;
+	min-width:1.8em;
+}
+.t-67d{
+	color:#67d5ff;
+}
+.ulev-temp{
+	font-size:1.7em;
+}
+
+.uinn-date{
+	padding: 0.5em 0.5em 1em;
+}
+
+.uinn-icons{
+	padding:1em;
+}

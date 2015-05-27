@@ -1,4 +1,4 @@
-function IMSIR01() {
+﻿function IMSIR01() {
     appcan.request.ajax({
         type : 'POST',
         url : 'http://180.153.139.167:8080/webapi',
@@ -13,6 +13,8 @@ function IMSIR01() {
         timeout : 300,
         success : function(data) {
             if (data.Error == "") {
+                alert(data.Data.DataTable[0].DEA001);
+                
                 
                 var IMSIR01Info=new Array(data.Data.DataTable.length);
                 // alert(IMSIR01Info.length);
