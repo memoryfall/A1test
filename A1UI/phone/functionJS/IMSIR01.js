@@ -12,8 +12,8 @@ function IMSIR01() {
         dataType : 'json',
         timeout : 300,
         success : function(data) {
-              
             if (data.Error == "") {
+
                 var IMSIR01Info=new Array(data.Data.DataTable.length);
                 // alert(IMSIR01Info.length);
                 
@@ -67,6 +67,10 @@ function IMSIR01() {
             alert("网络错误！");
         },
         offline : true
+    })
+}
+
+
     })
 }
 
