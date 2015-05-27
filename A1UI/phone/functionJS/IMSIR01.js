@@ -12,7 +12,7 @@ function IMSIR01() {
         dataType : 'json',
         timeout : 300,
         success : function(data) {
-            
+              
             if (data.Error == "") {
                 var IMSIR01Info=new Array(data.Data.DataTable.length);
                 // alert(IMSIR01Info.length);
@@ -60,11 +60,11 @@ function IMSIR01() {
                      
                    
             } else {
-                alert("�������Ϣ����,��˶�!");
+                alert("输入的信息有误,请核对!");
             }
         },
         error : function(xhr, type) {
-            alert("�������");
+            alert("网络错误！");
         },
         offline : true
     })
