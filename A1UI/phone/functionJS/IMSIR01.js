@@ -13,10 +13,11 @@ function IMSIR01() {
         timeout : 300,
         success : function(data) {
             if (data.Error == "") {
-
+                
                 var IMSIR01Info=new Array(data.Data.DataTable.length);
                 // alert(IMSIR01Info.length);
-                
+
+                alert(data.Data.DataTable[0].DEA001);            
                 for(var i=0;i<data.Data.DataTable.length;i++){
                    
                     IMSIR01Info[i]={
