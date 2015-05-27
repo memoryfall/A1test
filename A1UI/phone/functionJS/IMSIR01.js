@@ -1,4 +1,3 @@
-
 function IMSIR01() {
     appcan.request.ajax({
         type : 'POST',
