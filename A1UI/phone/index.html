@@ -23,6 +23,7 @@
                 bottom: 0;
                 width: 100%;
                 height: 2em;
+                z-index: 9999;
             }
             .overflow-top {
                 position: fixed;
@@ -33,9 +34,6 @@
             }
             .button1 {
                 font-weight: bold;
-                border: solid;
-                border-width: .1em;
-                border-radius: 1em;
             }
             .none {
                 display: none;
@@ -49,15 +47,18 @@
         .fixed{position:absolute;}
         </style>-->
     </head>
-    <body class="um-vp bc-bg" ontouchstart>
+    <body class="um-vp " ontouchstart>
         <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
-            <div id="header" class="uh bc-text-head bc-head">
+            <!--header开始-->
+            <div id="header" class="uh bc-text-head ub bc-head">
                 <div class="overflow-top">
                     <div class="link2 button-border button-box" id="nav-left">
                         <div class="ub-img res-list umw2 umh2"></div>
                     </div>
                 </div>
             </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l none"></div>
             <div id="main">
                 <div class="ub ub-ver uinn-squ1" id="content1">
                     我的
@@ -170,15 +171,20 @@
                 </div>
                 <div style="height:2em;"></div>
             </div>
-            <div class="ub umar-at1 overflow-bottom" style="width: 100%">
-                <div id="main-control" class="link2 ub ub-f1 btn ub-ac bc-text-head ub-pc uc-a1 bc-head bc-text-head fs-l button1 button-caution" style="border-color: #83BA41;" data-target="main">
-                    主页
-                </div>
-                <div id="function-control" class="link2 ub ub-f1 btn ub-ac bc-text-head ub-pc uc-a1 bc-head bc-text-head fs-l button1 button-caution" style="border-color: #83BA41;" data-target="function">
-                    功能
-                </div>
-                <div id="my-control" class="link2 ub ub-f1 btn ub-ac bc-text-head ub-pc uc-a1 bc-head bc-text-head fs-l button1 button-caution" style="border-color: #83BA41;" data-target="my">
-                    我的
+
+            <!--content结束-->
+
+            <div id="footer" class="overflow-bottom" style="width: 100%">
+                <div class="ub umar-at1 overflow-bottom" style="width: 100%">
+                    <div id="main-control" class="link2 ub ub-f1 btn ub-ac bc-text-head ub-pc uc-a1 bc-head bc-text-head fs-l button1 button-raised button-caution button-square" data-target="main">
+                        主页
+                    </div>
+                    <div id="function-control" class="link2 ub ub-f1 btn ub-ac bc-text-head ub-pc uc-a1 bc-head bc-text-head fs-l button1 button-raised button-caution button-square" data-target="function">
+                        功能
+                    </div>
+                    <div id="my-control" class="link2 ub ub-f1 btn ub-ac bc-text-head ub-pc uc-a1 bc-head bc-text-head fs-l button1 button-raised button-caution button-square" data-target="my">
+                        我的
+                    </div>
                 </div>
             </div>
         </div>
@@ -365,6 +371,7 @@
             var clicktext = document.getElementById(objN);
             document.getElementById("function").style.display = "none";
             document.getElementById("main").style.display = "none";
+            document.getElementById("content").style.display = "none";
             if (target.style.display == "block") {
                 target.style.display = "none";
                 clicktext.innerText = "打开";
@@ -380,10 +387,13 @@
         })
 
         appcan.button(".btn", "ani-act", function() {
-
-        })
-        appcan.button(".btn", "ani-act", function() {
-
+            document.getElementById("function").style.display = "none";
+            document.getElementById("main").style.display = "none";
+            document.getElementById("content").style.display = "block";
+            appcan.frame.open("content", "goods.html", 0, 0);
+            window.onorientationchange = window.onresize = function() {
+                appcan.frame.resize("content", 0, 0);
+            }
         })
     </script>
 </html>
