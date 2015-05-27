@@ -6,21 +6,21 @@ function createDB(DBname,DBid,cbCreateDB){
 
 
 // function openDataBaseCallback(opid,type,data){
-    // if(data==0){//Êı¾İ¿â´´½¨³É¹¦
+    // if(data==0){//æ•°æ®åº“åˆ›å»ºæˆåŠŸ
 //         
     // }else{
 //         
     // }
 // }
 
-//====================================¹Ø±ÕÊı¾İ¿â
+//====================================å…³é—­æ•°æ®åº“
 function closeDB(DBname, DBid,cbCloseDataBase){
      uexDataBaseMgr.closeDataBase(DBname, DBid);
      uexDataBaseMgr.cbCloseDataBase = cbCloseDataBase;
 }
 
 
-//=======================================´´½¨±í
+//=======================================åˆ›å»ºè¡¨
 function createTable(DBname,DBid,sqlExcute,createTableCallback){
     var sql=sqlExcute;
     uexDataBaseMgr.executeSql(DBname,DBid,sql);
@@ -28,14 +28,14 @@ function createTable(DBname,DBid,sqlExcute,createTableCallback){
 }
 
 // function createTableCallback(opid,type,data){
-    // if(data==0){//±í´´½¨³É¹¦
+    // if(data==0){//è¡¨åˆ›å»ºæˆåŠŸ
 //         
     // }else{
 //         
     // }
 // }
 
-//=========================================²åÈëÊı¾İ
+//=========================================æ’å…¥æ•°æ®
 function insertData(DBname,DBid,sqlExcute,insertDataCallback){
     var sql=sqlExcute;
     uexDataBaseMgr.executeSql(DBname,DBid,sql);
@@ -43,14 +43,14 @@ function insertData(DBname,DBid,sqlExcute,insertDataCallback){
 }
 
 // function insertDataCallback(opid,type,data){
-    // if(data==0){//Êı¾İ²åÈë³É¹¦
+    // if(data==0){//æ•°æ®æ’å…¥æˆåŠŸ
 //         
     // }else{
 //         
     // }
 // }
 
-//==========================================Ñ¡ÔñÊı¾İ
+//==========================================é€‰æ‹©æ•°æ®
 function selectData(DBname,DBid,sqlExcute,selectDataCallback){
     var sql=sqlExcute;
     uexDataBaseMgr.selectSql(DBname,DBid,sql);
@@ -58,21 +58,21 @@ function selectData(DBname,DBid,sqlExcute,selectDataCallback){
 }
 
 // function selectDataCallback(opid,type,value){
-    // if(type==1){//Ñ¡Ôñ²Ù×÷³É¹¦
+    // if(type==1){//é€‰æ‹©æ“ä½œæˆåŠŸ
 //         
     // }else{
 //         
     // }
 // }
 
-//===========================================É¾³ıÊı¾İ
+//===========================================åˆ é™¤æ•°æ®
 function deleteData(DBname,DBid,sqlExcute,deleteDataCallcak){
     var sql=sqlExcute;
     uexDataBaseMgr.selectSql(DBname,DBid,sql);
     uexDataBaseMgr.cbExecuteSql=deleteDataCallcak;
 }
 
-//ÊÂÎñ£¬Ôö£¬É¾  ²é
+//äº‹åŠ¡ï¼Œå¢ï¼Œåˆ   æŸ¥
 function transaction(DBname,DBid,sqlExcute,excuteCallbacks){
     var sql=sqlExcute;
     uexDataBaseMgr.selectSql(DBname,DBid,sql);

@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="../css/appcan.control.css">
     </head>
     <body class="um-vp bc-bg" ontouchstart>
-        <div id="listview"  class="ubt bc-border sc-bg"></div><div id="listview"  class="ubt bc-border sc-bg"></div>
+        <div id="listview"  class="ubt bc-border sc-bg"></div>
     </body>
     <script src="../js/appcan.js"></script>
     <script src="../js/appcan.control.js"></script>
@@ -21,40 +21,53 @@
     <script>
         appcan.ready(function() {
         });
+
         var lv = appcan.listview({
             selector : "#listview",
             type : "thickLine",
-            hasTouchEffect : true,
             hasIcon : false,
             hasAngle : false,
             hasSubTitle : true,
-            hasId : false,
             multiLine : 1,
-
         });
         lv.set([{
-            name : "1",
-            title : "000",
+            name : "Edit",
+            title : "李小白",
             describe : "WD259580208@digiwin.biz",
-            subTitle : "李小白",
-            url : "BASDI03/Edit.html",
+            subTitle : "135-2563-2547",
+            subDescribe : "002",
+            url : "IMSIR01/Edit.html",
             id : "1"
         }]);
-        var datalength = 3;
-        for (var i = 1; i < datalength; i++) {
+        var datalength=3;
+        for(var i=1;i<datalength;i++) {
             lv.add([{
-                name : "1",
-                title : "000",
-                describe : "WD259580208@digiwin.biz",
-                subTitle : "李小白",
-                url : "BASDI03/Edit.html",
-                id : "1"
-            }], 1);
+                name : "Edit",
+                title : "123",//商品名称
+                describe : "100.00",//平均成本
+                subTitle : "0.00",//库存数量
+                subDescribe : "100.00",//库存成本
+                url : "IMSIR01/Edit.html",
+                id : i,
+                "DEA001": "865b31ed-92f7-4f1e-c6b6-1140ca96c568",
+                "DEA002": "123",//商品名称
+                "DEA004": "",
+                "StockQuantity": "1.00",
+                "DEA012": "0.00",
+                "StockLack": "0.00",//库存数量
+                "StockCost": "100.00",//库存成本
+                "AvgCost": "100.00",//平均成本
+                "X1": "123",//商品编码
+                "DEF002": "",
+                "DEF003": ""//型号名称
+
+            }],1);
         }
         lv.on("click", function(ele, obj, curEle) {
             if (obj.name && obj.url) {
                 appcan.window.open(obj.name, obj.url, 10);
             }
         })
+
     </script>
 </html>
