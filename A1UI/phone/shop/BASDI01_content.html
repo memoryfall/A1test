@@ -32,35 +32,31 @@
             hasIcon : false,
             hasAngle : false,
             hasSubTitle : true,
-            hasId:true,
+            hasId : true,
             multiLine : 1,
-
         });
         lv.set([{
-            name:"Edit",
+            name : "Edit",
             title : "卖卖东东的小店",
             describe : "2595802",
             subTitle : "天猫",
-            url:"BASDI01/Edit.html?shopid=",
+            url : "BASDI01/Edit.html?shopid=",
             id : "1"
-        }, {
-            name:"Edit",
-            title : "卖卖东东的小店",
-            describe : "2595802",
-            subTitle : "天猫",
-            url:"BASDI01/Edit.html?shopid=",
-            id : "2"
-        }, {
-            name:"Edit",
-            title : "卖卖东东的小店",
-            describe : "2595802",
-            subTitle : "天猫",
-            url:"BASDI01/Edit.html?shopid=",
-            id : "100"
-        }])
+        }]);
+        var datalength = 3;
+        for (var i = 1; i < datalength; i++) {
+            lv.add([{
+                name : "Edit",
+                title : "卖卖东东的小店",
+                describe : "2595802",
+                subTitle : "天猫",
+                url : "BASDI01/Edit.html?shopid=",
+                id : "1",
+            }], 1);
+        }
         lv.on("click", function(ele, obj, curEle) {
             if (obj.name && obj.url) {
-                appcan.window.open(obj.name, obj.url+obj.id, 10);
+                appcan.window.open(obj.name, obj.url + obj.id, 10);
             }
         })
 
