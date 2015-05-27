@@ -15,11 +15,11 @@ function IMSIR01() {
             if (data.Error == "") {
                 
             } else {
-                alert("è¾“å…¥çš„ä¿¡æ¯æœ‰è¯¯,è¯·æ ¸å¯¹!");
+                alert("ÊäÈëµÄĞÅÏ¢ÓĞÎó,ÇëºË¶Ô!");
             }
         },
         error : function(xhr, type) {
-            alert("ç½‘ç»œé”™è¯¯ï¼");
+            alert("ÍøÂç´íÎó£¡");
         },
         offline : true
     })
