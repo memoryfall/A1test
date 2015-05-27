@@ -1,8 +1,8 @@
-function Login(){
+锘縡unction Login(){
     var account=$("#LoginAccout").val();
     var pass=$("#LoginPassword").val();
     if(account==""||pass==""){
-        alert("输入信息不完整，请重新输入！");
+        alert("请输入完整的用户信息");
     }else{
         appcan.request.ajax({
             type:'POST',
@@ -46,48 +46,48 @@ function Login(){
                         aniId:2
                     })
                 }else{
-                    alert("输入的信息有误,请核对!");
+                    alert("登录信息错误，请核对");
                 }
             },
             error:function(xhr,type){
-                alert("网络错误！");
+                alert("请求超时，请检查网络");
             },
             offline:true
         })
     }
 }
-//=================================创建数据库回调函数
+//=================================??????????????
 function cbCreatDB(opid,type,data){
     if(data==0){
-        alert("数据库打开成功");
+        alert("????????");
         
     }else{
-        alert("数据库打开失败");
+        alert("????????");
     }
 }
-//=================================创建表回调函数
+//=================================????????????
 function createTableCallback(opid,type,data){
     if(data==0){
-        alert("表创建成功");
+        alert("???????");
     }else{
-        alert('表创建失败');
+        alert('???????');
     }
 }
-//================================插入数据回调函数
+//================================?????????????
 function insertDataCallback(opid,type,data){
     if(data==0){
-        alert("数据插入成功！");
+        alert("??????????");
     }else{
-        alert("数据插入失败！");
+        alert("??????????");
     }
 }
-//===============================筛选数据回调函数
+//===============================???????????
 function selectDataCallback(opid,type,value){
    
     if (type == 1) {
         var jsonList = eval("(" + value + ")");
         if (jsonList.length == 0) {
-            alert("无数据");
+            alert("?????");
         }
         for (var i = 0; i < jsonList.length; i++) {
             for(var key in jsonList[i]){
@@ -95,7 +95,7 @@ function selectDataCallback(opid,type,value){
             }
         }
     } else {
-        alert("查询失败！");
+        alert("???????");
     }
 
 }

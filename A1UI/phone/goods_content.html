@@ -17,9 +17,12 @@
     <script src="js/appcan.js"></script>
     <script src="js/appcan.control.js"></script>
     <script src="js/my.listview.js"></script>
+    <script src="functionJS/IMSIR01.js"></script>
+    <script src="functionJS/showGoods.js"></script>
     </body>
     <script>
         appcan.ready(function() {
+             //IMSIR01();
         });
 
         var lv = appcan.listview({
@@ -28,41 +31,44 @@
             hasAngle : true
         });
         lv.set([{
-name:"BASDR01",
+            name:"BASDR01",
             title : "商品信息",
             id : "",
             color : "RGB(250,199,90)",
-            url:"goods/BASDR01.html"
+            url:"goods/BASDR01.html",
+            id:1
 
         }, {
             name:"KODRI03",
             title : "商品对应关系",
             id : "",
             color : "RGB(133,212,95)",
-            url:"goods/KODRI03.html"
+            url:"goods/KODRI03.html",
+            id:2
         }, {
             name:"IMSII02",
             title : "调整库存",
             id : "",
             color : "RGB(255,166,86)",
-            url:"goods/IMSII02.html"
+            url:"goods/IMSII02.html",
+            id:3
         }, {
             name : "IMSIR01",
             title : "库存报表",
             id : "",
             color : "RGB(254,109,114)",
-            url : "goods/IMSIR01.html"
+            url : "goods/IMSIR01.html",
+            id:4
         }, {
             name:"IMSIR03",
             title : "存货分析图",
             id : "",
             color : "RGB(93,206,240)",
-            url:"goods/IMSIR03.html"
+            url:"goods/IMSIR03.html",
+            id:5
         }])
         lv.on("click", function(ele, obj, curEle) {
-            if (obj.name && obj.url) {
-                appcan.window.open(obj.name, obj.url, 10);
-            }
+           showGoods(obj);
         })
     </script>
 </html>
