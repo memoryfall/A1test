@@ -11,38 +11,65 @@
         <link rel="stylesheet" href="../css/appcan.icon.css">
         <link rel="stylesheet" href="../css/appcan.control.css">
     </head>
+    <style>
+        .delete {
+            display: none;
+        }
+    </style>
     <body class="um-vp " ontouchstart>
-
+        <ul id=items>
+            <li>
+                List item 1 <span class=delete>DELETE</span>
+            </li>
+            <li>
+                List item 2 <span class=delete>DELETE</span>
+            </li>
+        </ul>
         <script src="../js/appcan.js"></script>
         <script src="../js/appcan.control.js"></script>
         <script src="../functionJS/IMSIR01.js"></script>
-   <script src="js/appcan.tab.js"></script>
- </body>
+        <script src="../js/appcan.tab.js"></script>
+    </body>
     <script>
         appcan.ready(function() {
-            IMSIR01();
-        });
-        
-        alert(appcan.locStorage.getVal('color'));
-   var tabview = appcan.tab({
-    selector : "#tabview",
-    hasIcon : true,
-    hasAnim : true,
-    hasLabel : true,
-    hasBadge : true,
-    data : [{
-        label : "QQ",
-        "icon":"fa-qq"
-    }, {
-        label : "微软",
-        "icon":"fa-windows"
-    }, {
-        label : "微信",
-        "icon":"fa-weixin",
-        badge:1
-    }]
+appcan.frame.openMulti({
+    popName:'nav',
+    content:{
+        content:[{
+            inPageName:'p1',
+            inUrl:'http://www.appcan.cn',
+            inData:''
+        },{
+            inPageName:'p2',
+            inUrl:'http://www.appcan.cn/kkk',
+            inData:''
+        },{
+            inPageName:'p3',
+            inUrl:'http://www.appcan.cn',
+            inData:''
+        },{
+            inPageName:'p4',
+            inUrl:'http://www.appcan.cn',
+            inData:''
+        }]
+    },
+    height:500,
+    dataType:0,
+    indexSelected:2
 });
-tabview.on("click",function(obj, index){
-})
- </script>
+        });
+    </script>
+    <script>
+        $('#items li').swipe(function() {
+        $('.delete').hide()
+        $('.delete', this).show()
+        })
+        // delete row on tapping delete button
+        $('.delete').tap(function() {
+        $(this).parent('li').remove()
+        })
+        $('body').swipeUp(function(e){
+        alert('swipeUp');//偶尔有效
+        })
+    </script>
 </html>
