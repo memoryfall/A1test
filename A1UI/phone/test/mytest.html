@@ -26,13 +26,15 @@
 
             </div>
             <!--content结束-->
-
+            <div id="tabview" class="uf sc-bg ubt sc-border-tab"></div>
         </div>
         <script src="../js/appcan.js"></script>
         <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.tab.js"></script>
     </body>
     <script>
-        appcan.ready(function() {appcan.locStorage.setVal('color','color');
+        appcan.ready(function() {
+            appcan.locStorage.setVal('color', 'color');
             var titHeight = $('#header').offset().height;
             appcan.frame.open("content", "mytest_content.html", 0, titHeight);
             window.onorientationchange = window.onresize = function() {
@@ -42,6 +44,25 @@
         appcan.button(".nav-btn", "btn-act", function() {
             appcan.window.close(-1);
         })
-
+        var tabview = appcan.tab({
+            selector : "#tabview",
+            hasIcon : true,
+            hasAnim : true,
+            hasLabel : true,
+            hasBadge : true,
+            data : [{
+                label : "QQ",
+                "icon" : "fa-qq"
+            }, {
+                label : "微软",
+                "icon" : "fa-windows"
+            }, {
+                label : "微信",
+                "icon" : "fa-weixin",
+                badge : 1
+            }]
+        });
+        tabview.on("click", function(obj, index) {
+        })
     </script>
 </html>
