@@ -21,8 +21,9 @@
     </body>
     <script>
         appcan.ready(function() {
+ 
         });
-
+        
         var lv = appcan.listview({
             selector : "#listview",
             type : "thickLine",
@@ -31,54 +32,60 @@
             hasSubTitle : true,
             multiLine : 1,
         });
-        lv.set([{
-            name : "Edit",
-            title : "123" + i, //"DEA002"
-            describe : "100.00", //"AvgCost"
-            subTitle : "0.00", //"StockLack"
-            subDescribe : "100.00", //"StockCost"
-            url : "IMSIR02.html",
-            id : "1",
-            "DEA001" : "865b31ed-92f7-4f1e-c6b6-1140ca96c568",
-            "DEA002" : "123", //商品名称
-            "DEA004" : "",
-            "StockQuantity" : "1.00",
-            "DEA012" : "0.00",
-            "StockLack" : "0.00", //库存数量
-            "StockCost" : "100.00", //库存成本
-            "AvgCost" : "100.00", //平均成本
-            "X1" : "123", //商品编码
-            "DEF002" : "",
-            "DEF003" : ""//型号名称
-        }]);
-        var datalength = 3;
-        for (var i = 1; i < datalength; i++) {
-            lv.add([{
-                name : "Edit",
-                title : "123", //商品名称
-                describe : "100.00", //平均成本
-                subTitle : "0.00", //库存数量
-                subDescribe : "100.00", //库存成本
-                url : "IMSIR02.html",
-                id : i,
-                "DEA001" : "865b31ed-92f7-4f1e-c6b6-1140ca96c568",
-                "DEA002" : "123", //商品名称
-                "DEA004" : "",
-                "StockQuantity" : "1.00",
-                "DEA012" : "0.00",
-                "StockLack" : "0.00", //库存数量
-                "StockCost" : "100.00", //库存成本
-                "AvgCost" : "100.00", //平均成本
-                "X1" : "123", //商品编码
-                "DEF002" : "",
-                "DEF003" : ""//型号名称
-            }], 1);
-        }
+        
+        var listData=JSON.parse(localStorage.getItem('listData'));
+        lv.set(listData);
         lv.on("click", function(ele, obj, curEle) {
-            if (obj.name && obj.url) {
+             if (obj.name && obj.url) {
                 appcan.window.open(obj.name, obj.url, 10);
+                
             }
+            
         })
+        // lv.set([{
+            // name : "Edit",
+            // title : "123" + i, //"DEA002"
+            // describe : "100.00", //"AvgCost"
+            // subTitle : "0.00", //"StockLack"
+            // subDescribe : "100.00", //"StockCost"
+            // url : "IMSIR02.html",
+            // id : "1",
+            // "DEA001" : "865b31ed-92f7-4f1e-c6b6-1140ca96c568",
+            // "DEA002" : "123", //商品名称
+            // "DEA004" : "",
+            // "StockQuantity" : "1.00",
+            // "DEA012" : "0.00",
+            // "StockLack" : "0.00", //库存数量
+            // "StockCost" : "100.00", //库存成本
+            // "AvgCost" : "100.00", //平均成本
+            // "X1" : "123", //商品编码
+            // "DEF002" : "",
+            // "DEF003" : ""//型号名称
+        // }]);
+        // var datalength = 3;
+        // for (var i = 1; i < datalength; i++) {
+            // lv.add([{
+                // name : "Edit",
+                // title : "123", //商品名称
+                // describe : "100.00", //平均成本
+                // subTitle : "0.00", //库存数量
+                // subDescribe : "100.00", //库存成本
+                // url : "IMSIR02.html",
+                // id : i,
+                // "DEA001" : "865b31ed-92f7-4f1e-c6b6-1140ca96c568",
+                // "DEA002" : "123", //商品名称
+                // "DEA004" : "",
+                // "StockQuantity" : "1.00",
+                // "DEA012" : "0.00",
+                // "StockLack" : "0.00", //库存数量
+                // "StockCost" : "100.00", //库存成本
+                // "AvgCost" : "100.00", //平均成本
+                // "X1" : "123", //商品编码
+                // "DEF002" : "",
+                // "DEF003" : ""//型号名称
+            // }], 1);
+        // }
+        
         
     </script>
 </html>
