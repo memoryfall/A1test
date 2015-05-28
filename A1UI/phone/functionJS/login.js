@@ -22,13 +22,13 @@
                     var count = 1;
                     createDB(DBname, DBid, cbCreatDB);
                     if (count == 1) {
-                        var sqlExcute = 'create table UserInfo(u_Account nvarchar(50) not null unique,u_Password nvarchar(50),TenantId int,UserId int,RoleId int)';
+                        var sqlExcute = 'create table UserInfo(u_Account nvarchar(50) not null unique,u_Password nvarchar(50),TenantId nvarchar(50),UserId nvarchar(50),RoleId nvarchar(50))';
                         createTable(DBname, DBid, sqlExcute, createTableCallback);
                         count += 1;
                     }
                     if (count == 2) {
                         
-                        var sqlExcute = 'insert into UserInfo values(' + "'" + account + "','" + pass + "'," + data.Data.TenantId + "," + data.Data.UserId + "," + data.Data.RoleId + ")";
+                        var sqlExcute = 'insert into UserInfo values(' + "'" + account + "','" + pass + "','" + data.Data.TenantId + "','" + data.Data.UserId + "','" + data.Data.RoleId + "')";
                         insertData(DBname, DBid, sqlExcute, insertDataCallback);
                         count += 1;
                     }
