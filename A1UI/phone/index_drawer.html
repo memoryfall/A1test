@@ -54,9 +54,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;">
-                                    <div class="res-subscribe ub-img umwh-icons"></div>
+                                <div class="link2 uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;" data-name="login" data-url="login.html">
                                     <div class="t-ef6 umar-r umar-l">
                                         登录
                                     </div>
@@ -85,16 +83,19 @@
         });
         var test = document.getElementById("content1");
         for (var i = 0; i < 5; i++) {
-            test.innerHTML += '<div class="link ubb-header uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;"><div class="ulev-1">店铺' + i + '</div></div>';
+            test.innerHTML += '<div class="link1 ubb-header uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;"><div class="ulev-1">店铺' + i + '</div></div>';
         }
 
-        appcan.button(".link", "btn-act", function() {
+        appcan.button(".link1", "btn-act", function() {
             appcan.window.close(-1);
             appcan.window.evaluateScript({
                 name : 'index',
                 scriptContent : 'appcan.window.close(-1)'
             });
             appcan.window.open('index', 'index.html', 0, 256);
+        })
+        appcan.button(".link2", "btn-act", function() {
+            appcan.window.open($(this).data("name"), $(this).data("url"), 10);
         })
         $('body').swipeLeft(function() {
             appcan.window.evaluateScript({

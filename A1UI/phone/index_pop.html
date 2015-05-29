@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="index/css/main.css">
+    </head>
+    <body class="ub um-vp ub-ver" ontouchstart style="">
+        <div class="ub ub-fv ub-fh" style="">
+            <div class="ub-b1 ub-fh " style="background-color:rgba(0,0,0,0);"  onclick="closeP();"></div>
+            <div class="uabs-oa uw-oa6">
+                <div class="c-bla-60 uinn-10">
+                    <div data-index='4' class="link ulev-1 ubb uinn-16 tx-c bc-text-head" ontouchstart="appcan.touch()" onclick="closeP();">
+                        客
+                    </div>
+                    <div data-index='5' class="link ulev-1 ubb uinn-16 tx-c bc-text-head" ontouchstart="appcan.touch()" onclick="closeP();">
+                        售
+                    </div>
+                    <div data-index='6' class="link ulev-1 uinn-16 tx-c bc-text-head" ontouchstart="appcan.touch()" onclick="closeP();">
+                        帐
+                    </div>
+                </div><div class="triangle3 ub-pe umar-l-oa"></div>
+            </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        appcan.button(".link", "btn-act", function() {
+            appcan.window.publish("frame_open", $(this).data("index"));
+        })
+        function closeP() {
+            appcan.execScriptInWin('index', 'closePop()');
+        }
+    </script>
+</html>

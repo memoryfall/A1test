@@ -4,312 +4,41 @@
         <title></title>
         <meta charset="utf-8">
         <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
         <link rel="stylesheet" href="css/ui-box.css">
-        <link rel="stylesheet" href="css/appcan.icon.css">
         <link rel="stylesheet" href="css/ui-base.css">
         <link rel="stylesheet" href="css/ui-color.css">
-        <link rel="stylesheet" href="index/css/main.css">
         <link rel="stylesheet" href="css/appcan.icon.css">
         <link rel="stylesheet" href="css/appcan.control.css">
         <link rel="stylesheet" href="css/buttons.css">
-        <style type="text/css">
-            body {
-                margin: 0;
-                padding: 0;
-                background: #ECECEC;
-            }
-            .overflow-bottom {
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-                height: 2em;
-                z-index: 9999;
-            }
-            .button1 {
-                font-weight: bold;
-            }
-            .none {
-                display: none;
-            }
-        </style>
-        <!--以下是为了兼容IE6的hack-->
-        <!--[if IE 6]>
-        <style type="text/css">
-        html{overflow:hidden;}
-        body{height:100%;overflow:auto;}
-        .fixed{position:absolute;}
-        </style>-->
     </head>
     <body class="um-vp " ontouchstart>
         <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
-            <!--header开始--><div id="header" class="uh bc-text-head ub bc-head none"></div>
-            <!-- <div id="header" class="uh bc-text-head ub bc-head none">
-            <div class="nav-btn" id="nav-left">
-            <div class="fa fa-angle-left fa-2x"></div>
+            <!--header开始-->
+            <div id="header" class="uh bc-text-head ub bc-head">
+                <div class="nav-btn" id="nav-left">
+                    <div class="ub-img icon-menu umw3 umh4"></div>
+                </div>
+                <h1 id="title" class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">云商务</h1>
+                <div class="nav-btn nav-bt" id="nav-right"></div>
             </div>
-            <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">进</h1>
-            <div class="nav-btn nav-bt" id="nav-right"></div>
-            </div> -->
             <!--header结束--><!--content开始-->
-            <div id="content" class="ub-f1 tx-l none"></div>
-            <div id="content1">
-                <div class="ub ub-ver uinn-squ1" id="content1_1">
-                    我的
-                    <div class="ub">
-                        <div class="ub-f1 ub ub-ver ub-ac">
-                            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn">
-                                <div class="uinn3 icon-map ub-img umh1 umw1"></div>
-                                图片按钮(左)
-                            </div>
-                        </div>
-                        <div class="ub-f1 ub ub-ver ub-ac">
-                            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn">
-                                <div class="uinn3 icon-map ub-img umh1 umw1"></div>
-                                图片按钮(左)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ub">
-                        <div class="ub-f1 ub ub-ver ub-ac">
-                            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn">
-                                <div class="uinn3 icon-map ub-img umh1 umw1"></div>
-                                图片按钮(左)
-                            </div>
-                        </div>
-                        <div class="ub-f1 ub ub-ver ub-ac">
-                            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn">
-                                <div class="uinn3 icon-map ub-img umh1 umw1"></div>
-                                图片按钮(左)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ub ub-ver uinn-squ1" id="content1_2">
-                    经常
-                    <div class="ub">
-                        <div class="ub-f1 ub ub-ver ub-ac">
-                            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn">
-                                <div class="uinn3 icon-map ub-img umh1 umw1"></div>
-                                图片按钮(左)
-                            </div>
-                        </div>
-                        <div class="ub-f1 ub ub-ver ub-ac">
-                            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn">
-                                <div class="uinn3 icon-map ub-img umh1 umw1"></div>
-                                图片按钮(左)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ub">
-                        <div class="ub-f1 ub ub-ver ub-ac">
-                            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn">
-                                <div class="uinn3 icon-map ub-img umh1 umw1"></div>
-                                图片按钮(左)
-                            </div>
-                        </div>
-                        <div class="ub-f1 ub ub-ver ub-ac">
-                            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn">
-                                <div class="uinn3 icon-map ub-img umh1 umw1"></div>
-                                图片按钮(左)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-                <div id="chart" style="height:15em;margin-left: 0.5em;margin-right: 0.5em;"></div>
-                <div style="height:3em;"></div>
-            </div>
-            <div id="content2" class="none" style="height: 100%">
-                <div class="ub ub-ver uinn-squ1">
-                    <div class="ub">
-                        <div class="link1 ub-f1 ub ub-ver ub-ac" data-name="shop" data-url="shop.html">
-                            <div class="uc-a-squ1 uwh-squ1 c-red1-squ ub ub-ac ub-pc">
-                                <!-- <div class="uc-a-squ1 uwh-squ1 ub-img squIcon1"></div> -->
-                                店
-                            </div>
-                        </div>
-                        <div class="link1 ub-f1 ub ub-ver ub-ac" data-name="goods" data-url="goods.html">
-                            <div class="uc-a-squ1 uwh-squ1 c-pur1-squ ub ub-ac ub-pc">
-                                <!-- <div class="uc-a-squ1 uwh-squ1 ub-img squIcon2"></div> -->
-                                货
-                            </div>
-                        </div>
-                        <div class="link1 ub-f1 ub ub-ver ub-ac" data-name="stock" data-url="stock.html">
-                            <div class="uc-a-squ1 uwh-squ1 c-org1-squ ub ub-ac ub-pc">
-                                <!-- <div class="uc-a-squ1 uwh-squ1 ub-img squIcon3"></div> -->
-                                进
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ub umar-at1">
-                        <div class="link1 ub-f1 ub ub-ver ub-ac" data-name="customer" data-url="customer.html">
-                            <div class="uc-a-squ1 uwh-squ1 c-blu1-squ ub ub-ac ub-pc">
-                                <!-- <div class="uc-a-squ1 uwh-squ1 ub-img squIcon4"></div> -->
-                                客
-                            </div>
-                        </div>
-                        <div class="link1 ub-f1 ub ub-ver ub-ac" data-name="sell" data-url="sell.html">
-                            <div class="uc-a-squ1 uwh-squ1 c-gre1-squ ub ub-ac ub-pc">
-                                <!-- <div class="uc-a-squ1 uwh-squ1 ub-img squIcon5"></div> -->
-                                售
-                            </div>
-                        </div>
-                        <div class="link1 ub-f1 ub ub-ver ub-ac" data-name="account" data-url="account.html">
-                            <div class="uc-a-squ1 uwh-squ1 c-yel1-squ ub ub-ac ub-pc">
-                                <!-- <div class="uc-a-squ1 uwh-squ1 ub-img squIcon6"></div> -->
-                                帐
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="height:2em;"></div>
-            </div>
+            <div id="content" class="ub-f1 tx-l">
 
+            </div>
             <!--content结束-->
-
-            <div id="footer" class="uf overflow-bottom">
-                <div class="ub umar-at1 overflow-bottom">
-                    <div id="content1" class="link2 ub ub-f1 ub-ac bc-text-head ub-pc uc-a1 bc-head bc-text-head fs-l button1 button-raised button-caution button-square" data-target="content1">
-                        主页
-                    </div>
-                    <div id="content2" class="link2 ub ub-f1 ub-ac bc-text-head ub-pc uc-a1 bc-head bc-text-head fs-l button1 button-raised button-caution button-square" data-target="content2">
-                        功能
-                    </div>
-                    <div id="my" class="link2 ub ub-f1 ub-ac bc-text-head ub-pc uc-a1 bc-head bc-text-head fs-l button1 button-raised button-caution button-square" data-target="my">
-                        我的
-                    </div>
-                </div>
+            <!--footer开始-->
+            <!--footer开始-->
+            <div id='footer' class='uf c-m2 c-bla t-wh'>
+                <div id="tabview" class="uf sc-bg ubt sc-border-tab"></div>
+                <!--footer结束-->
             </div>
+            <!--footer结束-->
         </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.tab.js"></script>
     </body>
-    <script src="js/appcan.js"></script>
-    <script src="js/appcan.control.js"></script><!-- ECharts单文件引入 -->
-    <script src="EChart/dist/echarts-all.js"></script>
-    <script type="text/javascript">
-        //基于准备好的dom，初始化echarts图表
-        var myChart = echarts.init(document.getElementById('chart'));
-
-        var loadingTicket;
-        myChart.showLoading({
-            text : '请稍后...',
-            effect : 'bubble',
-            textStyle : {
-                fontSize : 20
-            }
-        });
-        clearTimeout(loadingTicket);
-        loadingTicket = setTimeout(function() {
-            myChart.hideLoading();
-            myChart.setOption(option);
-        }, 2200);
-        // 为echarts对象加载数据
-        myChart.setOption({
-            title : {
-                text : "收支情况表",
-                x : "center",
-                y : "top"
-            },
-            tooltip : {
-                trigger : 'axis'
-            },
-            legend : {
-                x : 'left', // 'center' | 'left' | {number},
-                y : 'bottom', // 'center' | 'bottom' | {number}
-                data : ['收入', '支出']
-            },
-            toolbox : {
-                show : true,
-                orient : 'horizontal', // 布局方式，默认为水平布局，可选为：
-                // 'horizontal' ¦ 'vertical'
-                x : 'right', // 水平安放位置，默认为全图右对齐，可选为：
-                // 'center' ¦ 'left' ¦ 'right'
-                // ¦ {number}（x坐标，单位px）
-                y : 'bottom', // 垂直安放位置，默认为全图顶端，可选为：
-                // 'top' ¦ 'bottom' ¦ 'center'
-                // ¦ {number}（y坐标，单位px）
-                feature : {
-                    dataView : {//数据视图
-                        show : true,
-                        readOnly : false
-                    },
-                    magicType : {
-                        show : true,
-                        type : ['line', 'bar']//可选图标项
-                    },
-                    restore : {//
-                        show : true
-                    },
-                    saveAsImage : {
-                        show : true
-                    }
-                }
-            },
-            calculable : true,
-            xAxis : [{
-                type : 'category',
-                boundaryGap : true,
-                data : ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-            }],
-            yAxis : [{
-                type : 'value',
-                scale : true, //截取值域
-                axisLabel : {
-                    formatter : '{value}元'
-                },
-                splitArea : {
-                    show : true//区分值域
-                }
-            }],
-            series : [{
-                name : '收入',
-                type : 'line',
-                data : [62, 60, 68, 62, 58, 60, 62, 58, 61, 59, 64, 65],
-                markPoint : {
-                    data : [{
-                        type : 'max',
-                        name : '最大值'
-                    }, {
-                        type : 'min',
-                        name : '最小值'
-                    }]
-                },
-                markLine : {
-                    data : [{
-                        type : 'average',
-                        name : '平均值'
-                    }]
-                }
-            }, {
-                name : '支出',
-                type : 'line',
-                data : [51, 47, 49, 55, 48, 57, 54, 51, 59, 53, 56, 56],
-                markPoint : {
-                    data : [{
-                        type : 'max',
-                        name : '最大值'
-                    }, {
-                        type : 'min',
-                        name : '最小值'
-                    }]
-                },
-                markLine : {
-                    data : [{
-                        type : 'average',
-                        name : '平均值'
-                    }]
-                }
-            }],
-            grid : {//坐标轴外边
-                x : 48,
-                x2 : 48,
-            },
-            backgroundColor : "rgb(255, 255, 255)"
-        });
-        window.onresize = function() {
-            myChart.resize();
-        }
-
-    </script>
     <script>
         var f = parseInt(parseInt(window.screen.width)) / parseInt($('body').width(), 10);
         var em = '';
@@ -318,11 +47,15 @@
                 f = 1;
             var titHeight = $('#header').offset().height;
             em = parseInt($('#header').css('font-size'));
+            appcan.frame.open("content", "index_content.html", 0, titHeight);
+            window.onorientationchange = window.onresize = function() {
+                appcan.frame.resize("content", 0, titHeight);
+            }
             appcan.window.publish("draw_open", "");
             appcan.window.subscribe("main_window_close", function() {
                 appcan.window.close(-1);
             });
-            appcan.window.subscribe("draw_active", function() {
+            appcan.window.subscribe("main_window_active", function() {
                 drawer_status = 1;
                 animFrame();
             })
@@ -336,62 +69,128 @@
             })
         });
         var drawer_status = 0;
-        appcan.button(".link2", "btn-act", function(a, b) {
+        appcan.button(".nav-btn", "btn-act", function(a, b) {
             var btn = $(a.currentTarget);
             var btn_id = btn.attr('id');
-            if (btn_id == 'my') {
+            if (btn_id == 'nav-left') {
                 animFrame();
             } else {
-                showdiv(btn_id);
+
             }
         })
         function animFrame() {
             var move = {
                 dx : drawer_status ? 0 : parseInt(($('#header').offset().width - 4 * em) * f),
-                dy : drawer_status ? 0 : 0,
+                dy : drawer_status ? 0 : 10,
                 callback : function() {
+
                 }
             }
             drawer_status = drawer_status ? 0 : 1;
             appcan.window.setWindowFrame(move);
         }
 
-        function showdiv(targetid) {
-            var target = document.getElementById(targetid);
-            document.getElementById("content2").style.display = "none";
-            document.getElementById("content1").style.display = "none";
-            document.getElementById("content").style.display = "none";
-            appcan.frame.close("content");
-            if (target.style.display == "block") {
-                target.style.display = "none";
+        var titleList = ['云商务', '店', '货', '进','客','售','帐']
+        var tabview = appcan.tab({
+            selector : "#tabview",
+            hasIcon : false,
+            hasAnim : true,
+            hasLabel : true,
+            hasBadge : false,
+            data : [{
+                label : "首页",
+                "icon" : "fa-home",
+            }, {
+                label : "店",
+                "icon" : "fa-list-alt"
+            }, {
+                label : "货",
+                "icon" : "fa-user",
+            }, {
+                label : "进",
+                "icon" : "fa-plus-square",
+            }, {
+                label : "更多",
+                "icon" : " ",
+            }]
+        });
+        tabview.on("click", function(obj, index) {/*TAB变更时切换多浮动窗口*/
+            if (index != 4) {
+                document.getElementById("title").innerHTML = titleList[index];
+                appcan.window.selectMultiPopover("content", index);
             } else {
-                target.style.display = "block";
+                openPop();
+                appcan.window.subscribe("frame_open", function(index) {
+                document.getElementById("title").innerHTML = titleList[index];
+                appcan.window.selectMultiPopover("content", index);
+            })
+            }
+        })
+        appcan.ready(function() {
+            var top = $('#header').offset().height;
+            appcan.frame.open({/*创建多浮动窗口*/
+                id : "content",
+                url : [{
+                    "inPageName" : "index",
+                    "inUrl" : "index_content.html",
+                }, {
+                    "inPageName" : "shop",
+                    "inUrl" : "shop_content.html",
+                }, {
+                    "inPageName" : "goods",
+                    "inUrl" : "goods_content.html",
+                }, {
+                    "inPageName" : "stock",
+                    "inUrl" : "stock_content.html",
+                }, {
+                    "inPageName" : "customer",
+                    "inUrl" : "customer_content.html",
+                }, {
+                    "inPageName" : "sell",
+                    "inUrl" : "sell_content.html",
+                }, {
+                    "inPageName" : "account",
+                    "inUrl" : "account_content.html",
+                }],
+                top : top,
+                left : 0,
+                index : 0,
+                change : function(index, res) {/*浮动窗口推拽变更时回调，可控制tab进行同步变更*/
+                    tabview.moveTo(res.multiPopSelectedIndex);
+
+                }
+            });
+            window.onorientationchange = window.onresize = function() {
+                appcan.frame.resize("content", 0, top);
+            }
+        });
+        var sta = 0;
+
+        function openPop() {
+            // if(navigator.userAgent.match(/Android/i)){
+            // return;
+            // }
+            // //判断是否是iphone或者ipad
+            // if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
+            // return;
+            // }
+            // if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i)=="micromessenger"){
+            // return;
+            // }
+            if (sta == 0) {
+                var s = $("#content");
+                var x = 0;
+                var y = parseInt(s.css("font-size")) * 2;
+                appcan.openPopoverByEle("content", "index_pop.html", parseInt(x), parseInt(y), 0, "index_pop");
+                sta = 1;
+            } else {
+                closePop();
             }
         }
-        appcan.button(".link1", "ani-act", function() {
-            appcan.window.open($(this).data("name"), $(this).data("url"), 10);
-        })
-        appcan.button(".btn", "ani-act", function() {
-            document.getElementById("content2").style.display = "none";
-            document.getElementById("content1").style.display = "none";
-            document.getElementById("content").style.display = "block";
-            var titHeight = $('#header').offset().height;
-            appcan.frame.open("content", "stock.html", 0, titHeight);
-            window.onorientationchange = window.onresize = function() {
-                appcan.frame.resize("content", 0, titHeight);
-            }
-        })
 
-        $('#content1').swipeLeft(function() {
-            document.getElementById("content1").style.display = "none";
-            document.getElementById("content2").style.display = "block";
-        })
-        $('#content1').swipeRight(function(e) {
-            animFrame();
-        })
-        $('#content2').swipeRight(function(e) {
-            document.getElementById("content2").style.display = "none";
-            document.getElementById("content1").style.display = "block";
-        })
+        function closePop() {
+            appcan.closePopover('index_pop');
+            sta = 0;
+        }
     </script>
 </html>

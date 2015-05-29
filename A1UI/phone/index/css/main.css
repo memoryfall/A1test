@@ -1,62 +1,36 @@
-.t-btn-oah {
-    background-image: url('myImg/t-btn-oah.png');
+.t-btn-oas{
+	background-image:url('myImg/t-btn-oas.png');
 }
-.squIcon1 {
-    background-image: url('myImg/squIcon1.png');
+.triangle3 {
+	width: 0px;
+	border-top: 0.46875em solid rgba(0,0,0,0.6);
+	border-right: 0.46875em solid transparent;
+	border-bottom: 0;
+	border-left: 0.46875em solid transparent;
 }
-.squIcon2 {
-    background-image: url('myImg/squIcon2.png');
+.c-bla-60{
+	background-color:rgba(0,0,0,0.6);
 }
-.squIcon3 {
-    background-image: url('myImg/squIcon3.png');
+.b-wh-50{
+	border-color:rgba(255,255,255,0.5);
 }
-.squIcon4 {
-    background-image: url('myImg/squIcon4.png');
+.uinn-10{
+	padding:0 0.3125em; 
 }
-.squIcon5 {
-    background-image: url('myImg/squIcon5.png');
+.uinn-16{
+	padding:0.65em 0; 
 }
-.squIcon6 {
-    background-image: url('myImg/squIcon6.png');
+.uw-oa6{
+	width:6.25em;
 }
-.res-list {
-    background-image: url('myImg/list.png');
+.uabs-oa{
+	position:absolute;
+	bottom:0;
+	right:0.625em;
 }
-.uinn-squ1 {
-    padding: .5em .5em;
+.umar-l-oa{
+	margin-left:4.4em;
 }
-.uwh-squ1 {
-    width: 4em;
-    height: 4em;
-}
-.uc-a-squ1 {
-    -webkit-border-radius: 4em;
-    border-radius: 4em;
-}
-.c-gre1-squ {
-    background-color: #AEE588;
-}
-.c-red1-squ {
-    background-color: #F67B7D;
-}
-.c-pur1-squ {
-    background-color: #9592EB;
-}
-.c-blu1-squ {
-    background-color: #79C6EC;
-}
-.c-org1-squ {
-    background-color: #F88862;
-}
-.c-yel1-squ {
-    background-color: #F8DC7C;
-}
-.ulev-squ {
-    font-size: 0.9375em;
-}
-.t-gra7 {
-    color: #6a6a6a;
-}
-.umar-at1 {
-    margin-top: 0.625em;
+.umar-t-oap{
+	margin-top:2.75em;
 }

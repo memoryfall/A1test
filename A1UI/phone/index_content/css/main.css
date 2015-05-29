@@ -1,0 +1,62 @@
+.t-btn-oah {
+    background-image: url('myImg/t-btn-oah.png');
+}
+.squIcon1 {
+    background-image: url('myImg/squIcon1.png');
+}
+.squIcon2 {
+    background-image: url('myImg/squIcon2.png');
+}
+.squIcon3 {
+    background-image: url('myImg/squIcon3.png');
+}
+.squIcon4 {
+    background-image: url('myImg/squIcon4.png');
+}
+.squIcon5 {
+    background-image: url('myImg/squIcon5.png');
+}
+.squIcon6 {
+    background-image: url('myImg/squIcon6.png');
+}
+.res-list {
+    background-image: url('myImg/list.png');
+}
+.uinn-squ1 {
+    padding: .5em .5em;
+}
+.uwh-squ1 {
+    width: 4em;
+    height: 4em;
+}
+.uc-a-squ1 {
+    -webkit-border-radius: 4em;
+    border-radius: 4em;
+}
+.c-gre1-squ {
+    background-color: #AEE588;
+}
+.c-red1-squ {
+    background-color: #F67B7D;
+}
+.c-pur1-squ {
+    background-color: #9592EB;
+}
+.c-blu1-squ {
+    background-color: #79C6EC;
+}
+.c-org1-squ {
+    background-color: #F88862;
+}
+.c-yel1-squ {
+    background-color: #F8DC7C;
+}
+.ulev-squ {
+    font-size: 0.9375em;
+}
+.t-gra7 {
+    color: #6a6a6a;
+}
+.umar-at1 {
+    margin-top: 0.625em;
+}

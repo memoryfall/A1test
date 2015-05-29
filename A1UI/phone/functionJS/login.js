@@ -39,7 +39,7 @@
                     localStorage.setItem("TenantId",data.Data.TenantId);
                     localStorage.setItem("UserId",data.Data.UserId);
                     localStorage.setItem("RoleId",data.Data.RoleId);
-                    
+                    appcan.window.close(-1);
                     appcan.window.open({
                         name:'index',
                         data:'index.html',
