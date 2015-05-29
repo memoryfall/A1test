@@ -24,8 +24,8 @@
             }
         </style>
     </head>
-    <body class="um-vp drawer2-bg">
-        <div id="page_0" class="ub uhide">
+    <body class="um-vp drawer2-bg uhide">
+        <div id="page_0" class="ub">
             <div id="left" class="ub ub-ver ub-f1 bc-text-head ub-img3 drawer2-bg ub-fv  tx-l shadow drawer">
                 <div id="header" class="uh">
                     <div class="uinn-hcontent">
@@ -54,9 +54,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;">
-                                    <div class="res-subscribe ub-img umwh-icons"></div>
+                                <div class="link2 uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;" data-name="login" data-url="login.html">
                                     <div class="t-ef6 umar-r umar-l">
                                         登录
                                     </div>
@@ -73,11 +71,11 @@
         appcan.ready(function() {
             appcan.window.open("index", "index.html", 10, 256);
             //订阅main_window_open频道，如果有消息发给该频道，则会执行响应的回调
-            appcan.window.subscribe("main_window_open", function() {
+            appcan.window.subscribe("draw_open", function() {
                 //1秒后执行撤销隐藏
                 setTimeout(function() {
-                    $("#page_0").removeClass("uhide");
-                }, 1000);
+                    $("body").removeClass("uhide");
+                }, 0);
             })
             appcan.window.subscribe("draw_close", function() {
                 appcan.window.close(-1);
@@ -85,18 +83,19 @@
         });
         var test = document.getElementById("content1");
         for (var i = 0; i < 5; i++) {
-            test.innerHTML += '<div class="link ubb-header uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;"><div class="ulev-1">店铺' + i + '</div></div>';
+            test.innerHTML += '<div class="link1 ubb-header uinn-tbinlist ub ub-ac ub-pc" style="line-height:1em;"><div class="ulev-1">店铺' + i + '</div></div>';
         }
 
-        appcan.button(".link", "btn-act", function() {appcan.window.close('index');
-            appcan.window.open('index', 'index.html', 10, 256);
-            appcan.window.subscribe("main_window_open", function() {
-                setTimeout(function() {
-                    $("#page_0").removeClass("uhide");
-                }, 1000);
-            })
-            appcan.window.subscribe("draw_close", function() {
-                appcan.window.close(-1);
+        appcan.button(".link1", "btn-act", function() {
+            appcan.window.publish("main_window_fresh","");
+        })
+        appcan.button(".link2", "btn-act", function() {
+            appcan.window.open($(this).data("name"), $(this).data("url"), 10);
+        })
+        $('body').swipeLeft(function() {
+            appcan.window.evaluateScript({
+                name : 'index',
+                scriptContent : 'if (drawer_status) {animFrame();} else {appcan.window.publish("draw_close", "");appcan.window.close(-1);}'
             });
         })
     </script>

@@ -101,7 +101,7 @@
             hasIcon : true,
             hasAnim : true,
             hasLabel : true,
-            hasBadge : false,
+            hasBadge : true,
             data : [{
                 label : "首页",
                 "icon" : "",
@@ -122,8 +122,13 @@
         var url="shop_content.html";
         tabview.on("click", function(obj, index) {/*TAB变更时切换多浮动窗口*/
             if (index != 4) {
-                document.getElementById("title").innerHTML = titleList[index];
-                appcan.window.selectMultiPopover("content", index);
+                // document.getElementById("title").innerHTML = titleList[index];
+                // appcan.window.selectMultiPopover("content", index);
+                var titHeight = $('#header').offset().height;
+            appcan.frame.open("content", url, 0, titHeight);
+            window.onorientationchange = window.onresize = function() {
+                appcan.frame.resize("content", 0, titHeight);
+            }
             } else {
                 openPop();
                 appcan.window.subscribe("frame_open", function(index) {

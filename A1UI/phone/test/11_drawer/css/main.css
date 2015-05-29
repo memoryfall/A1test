@@ -1,0 +1,128 @@
+.drawer2-bg{
+	background-image:url(images/drawer2-bg.png);
+}
+.res-bodybg{
+	background-image:url(images/bodybg.png);
+}
+.res-hassubscribe{
+	background-image:url(images/hassubscribe.png);
+}
+.res-subscribe{
+	background-image:url(images/subscribe.png);
+}
+.res-doublearrow{
+	background-image:url(images/doublearrow.png);
+}
+.res-news{
+	background-image:url(images/news.png);
+}
+.ut-sbody{
+	-webkit-box-shadow:-20px 0px 20px rgba(63,66,72,1) inset;
+	box-shadow:-20px 0px 20px rgba(63,66,72,1) inset;
+}
+.uinn-header{
+	padding-top:0.8em;
+	padding-bottom:0.6em;
+}
+.uinn-hcontent{
+	padding:0.5em 0.5em 0;
+}
+.uinn-lrcontent{
+	padding:0 0.5em;
+}
+.ubb-header{
+	border-bottom:1px solid #5b5b5b;
+}
+.uinn-tlist{
+	
+}
+.uinn-tblist{
+	padding-top:0.7em;
+	padding-bottom:0.7em;
+}
+.uinn-tbinlist{
+	padding-top:0.9em;
+	padding-bottom:0.9em;
+}
+.ulev-list{
+	font-size:0.9em;
+}
+.t-ef6{
+	color:#ef6413;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.uinn-weather{
+	padding:1em;
+}
+
+
+
+
+
+.res-weather{
+	background-image:url(images/weather.png);
+}
+.res-inbox{
+	background-image:url(images/inbox.png);
+}
+.res-contact{
+	background-image:url(images/contact.png);
+}
+.res-favorite{
+	background-image:url(images/favorite.png);
+}
+.res-memo{
+	background-image:url(images/memo.png);
+}
+.res-message{
+	background-image:url(images/message.png);
+}
+.res-feedback{
+	background-image:url(images/feedback.png);
+}
+.res-setting{
+	background-image:url(images/setting.png);
+}
+.res-addmore{
+	background-image:url(images/addmore.png);
+}
+
+
+
+.umw-weather{
+	min-width:3em;
+	min-height:3em;
+}
+.umwh-icons{
+	min-height:1.6em;
+	min-width:1.6em;
+}
+.umwh-addmore{
+	min-height:1.8em;
+	min-width:1.8em;
+}
+.t-67d{
+	color:#67d5ff;
+}
+.ulev-temp{
+	font-size:1.7em;
+}
+
+.uinn-date{
+	padding: 0.5em 0.5em 1em;
+}
+
+.uinn-icons{
+	padding:1em;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="index_content/css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver uinn-squ1" id="content1_1">
+            我的
+            <div id="listview"  class="ubt bc-border sc-bg"></div>
+        </div>
+        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+        <div id="chart" style="height:15em;margin-left: 0.5em;margin-right: 0.5em;"></div>
+        <script src="js/appcan.listview.js"></script>
+    </body>
+    <script src="js/appcan.js"></script>
+    <script src="js/appcan.control.js"></script>
+    <!-- ECharts单文件引入 -->
+    <script src="EChart/dist/echarts-all.js"></script>
+    <script src="js/my.listview.js"></script>
+    <script type="text/javascript">
+        //基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('chart'));
+
+        var loadingTicket;
+        myChart.showLoading({
+            text : '请稍后...',
+            effect : 'bubble',
+            textStyle : {
+                fontSize : 20
+            }
+        });
+        clearTimeout(loadingTicket);
+        loadingTicket = setTimeout(function() {
+            myChart.hideLoading();
+            myChart.setOption(option);
+        }, 2200);
+        // 为echarts对象加载数据
+        myChart.setOption({
+            title : {
+                text : "收支情况表",
+                x : "center",
+                y : "top"
+            },
+            tooltip : {
+                trigger : 'axis'
+            },
+            legend : {
+                x : 'left', // 'center' | 'left' | {number},
+                y : 'bottom', // 'center' | 'bottom' | {number}
+                data : ['收入', '支出']
+            },
+            toolbox : {
+                show : true,
+                orient : 'horizontal', // 布局方式，默认为水平布局，可选为：
+                // 'horizontal' ¦ 'vertical'
+                x : 'right', // 水平安放位置，默认为全图右对齐，可选为：
+                // 'center' ¦ 'left' ¦ 'right'
+                // ¦ {number}（x坐标，单位px）
+                y : 'bottom', // 垂直安放位置，默认为全图顶端，可选为：
+                // 'top' ¦ 'bottom' ¦ 'center'
+                // ¦ {number}（y坐标，单位px）
+                feature : {
+                    dataView : {//数据视图
+                        show : true,
+                        readOnly : false
+                    },
+                    magicType : {
+                        show : true,
+                        type : ['line', 'bar']//可选图标项
+                    },
+                    restore : {//
+                        show : true
+                    },
+                    saveAsImage : {
+                        show : true
+                    }
+                }
+            },
+            calculable : true,
+            xAxis : [{
+                type : 'category',
+                boundaryGap : true,
+                data : ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+            }],
+            yAxis : [{
+                type : 'value',
+                scale : true, //截取值域
+                axisLabel : {
+                    formatter : '{value}元'
+                },
+                splitArea : {
+                    show : true//区分值域
+                }
+            }],
+            series : [{
+                name : '收入',
+                type : 'line',
+                data : [62, 60, 68, 62, 58, 60, 62, 58, 61, 59, 64, 65],
+                markPoint : {
+                    data : [{
+                        type : 'max',
+                        name : '最大值'
+                    }, {
+                        type : 'min',
+                        name : '最小值'
+                    }]
+                },
+                markLine : {
+                    data : [{
+                        type : 'average',
+                        name : '平均值'
+                    }]
+                }
+            }, {
+                name : '支出',
+                type : 'line',
+                data : [51, 47, 49, 55, 48, 57, 54, 51, 59, 53, 56, 56],
+                markPoint : {
+                    data : [{
+                        type : 'max',
+                        name : '最大值'
+                    }, {
+                        type : 'min',
+                        name : '最小值'
+                    }]
+                },
+                markLine : {
+                    data : [{
+                        type : 'average',
+                        name : '平均值'
+                    }]
+                }
+            }],
+            grid : {//坐标轴外边
+                x : 48,
+                x2 : 48,
+            },
+            backgroundColor : "rgb(255, 255, 255)"
+        });
+        window.onresize = function() {
+            myChart.resize();
+        }
+
+    </script>
+    <script>
+        appcan.ready(function() {
+        });
+        var lv = appcan.listview({
+            selector : "#listview",
+            type : "thinLine",
+            hasAngle : true
+        });
+        lv.set([{
+            name : "BASDI08",
+            title : "客户管理",
+            id : "",
+            color : "RGB(250,199,90)",
+            url : "customer/BASDI08.html"
+        }, {
+            name : "test",
+            title : "测试",
+            id : "",
+            color : "RGB(250,123,90)",
+            url : "test/test.html"
+        }])
+        lv.on("click", function(ele, obj, curEle) {
+            if (obj.name && obj.url) {
+                appcan.window.open(obj.name, obj.url, 10);
+            }
+        })
+
+    </script>
+</html>
