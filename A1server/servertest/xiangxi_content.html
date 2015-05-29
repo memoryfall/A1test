@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="xiangxi_content/css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver">
+            <div class=" umar-at1">
+                <div id="listview1"  class="ubt bc-border c-wh">
+
+                </div>
+                <div id="listview2"  class="ubt bc-border ubb c-wh umar-at1 uinn-a7">
+
+                </div>
+
+            </div>
+            <div id="listview3"  class="ubt ubb bc-border c-wh umar-at1 uinn-a7">
+
+            </div>
+            <div  id="listview4"  class="ubt ubb bc-border c-wh umar-at1 uinn-a7">
+
+            </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var lv1 = appcan.listview({
+            selector : "#listview1",
+            type : "thickLine",
+            hasIcon : true,
+            hasAngle : true,
+            hasSubTitle : false,
+            multiLine : 1
+        });
+        lv1.set([{
+            icon : 'xiangxi_content/css/myImg/myImg6.png',
+            title : '<div class="ub"><div class="umar-ar3">用户名</div><div class="sc-bg-alert uc-a1 uinn3 ulev-2 bc-text-head">V<span class="ulev-2">2</span>会员</div></div>',
+            describe : '帐号：admin'
+        }]);
+        var lv2 = appcan.listview({
+            selector : "#listview2",
+            type : "thinLine",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : true,
+            multiLine : 1
+        });
+        lv2.set([{
+            icon : 'xiangxi_content/css/myImg/myImg1.png',
+            title : '我的相册',
+            subTitle : '备注文字'
+        }, {
+            icon : 'xiangxi_content/css/myImg/myImg2.png',
+            title : '我的收藏',
+            subTitle : ''
+        }, {
+            icon : 'xiangxi_content/css/myImg/myImg3.png',
+            title : '我的银行卡',
+            subTitle : ''
+        }]);
+        var lv3 = appcan.listview({
+            selector : "#listview3",
+            type : "thinLine",
+            hasIcon : true,
+            hasAngle : true,
+            multiLine : 1
+        });
+        lv3.set([{
+            icon : 'xiangxi_content/css/myImg/myImg4.png',
+            title : '<div class="ub">表情包<div class=" uwh-FP2 uc-a-FP1 sc-bg-alert bc-text-head ulev-4 ufm1 ub ub-ac ub-pc">NEW</div></div>'
+        }]);
+        var lv4 = appcan.listview({
+            selector : "#listview4",
+            type : "thinLine",
+            hasIcon : true,
+            hasAngle : true,
+            multiLine : 1
+        });
+        lv4.set([{
+            icon : 'xiangxi_content/css/myImg/myImg5.png',
+            title : '设置'
+        }]);
+    </script>
+</html>

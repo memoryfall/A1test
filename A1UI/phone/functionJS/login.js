@@ -6,7 +6,8 @@
     }else{
         appcan.request.ajax({
             type:'POST',
-            url:'http://180.153.139.167:8080/webapi',
+            // url:'http://180.153.139.167:8080/webapi',
+            url:baseURL,
             data:{
                 Service:'Login',
                 Method:'Read',

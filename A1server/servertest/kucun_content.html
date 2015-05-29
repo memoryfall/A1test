@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="kucun_content/css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="umar-a sc-bg" id="goodsList">
+
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+            showGoods();
+        })
+        function showGoods() {
+            var arrData = [{
+                "goods" : "kucun_content/css/myImg/gs1.png",
+                "synopsis" : "情人节礼物怡吻手工松露巧...",
+                "price" : "￥69",
+                "price2" : "￥99",
+                "popularity" : "18",
+
+            }, {
+                "goods" : "kucun_content/css/myImg/gs2.png",
+                "synopsis" : "香港OPPO女包2014新款包",
+                "price" : "￥69",
+                "price2" : "￥99",
+                "popularity" : "18",
+            }, {
+                "goods" : "kucun_content/css/myImg/gs3.png",
+                "synopsis" : "包邮零俊间厅柜 门厅玄关隔",
+                "price" : "￥69",
+                "price2" : "￥99",
+                "popularity" : "68",
+            }, {
+                "goods" : "kucun_content/css/myImg/gs4.png",
+                "synopsis" : "普耐尔S1学习机安卓系统7寸",
+                "price" : "￥629",
+                "price2" : "￥99",
+                "popularity" : "21",
+            }, {
+                "goods" : "kucun_content/css/myImg/gs5.png",
+                "synopsis" : "KINGBAND棒球服男 棒球衫",
+                "price" : "￥69",
+                "price2" : "￥99",
+                "popularity" : "233",
+            }, {
+                "goods" : "kucun_content/css/myImg/gs6.png",
+                "synopsis" : "奢谷SHEGU女士韩版上衣",
+                "price" : "￥69",
+                "price2" : "￥99",
+                "popularity" : "122",
+            }];
+
+            var listData = [];
+            for (var i = 0,
+                len = arrData.length; i < len; i++) {
+                var list = {
+                    title : arrData[i].synopsis,
+                    icon : arrData[i].goods,
+                    describe : '<div class="sc-text-warn ">'+'规格'+'</div>'+'<div class="sc-text-warn ">'+'规格'+'</div>'+'<div class="sc-text-warn ">'+'规格'+'</div>'
+                }
+                listData.push(list);
+            }
+            var lv1 = appcan.listview({
+                selector : "#goodsList",
+                type : "thickLine",
+                hasIcon : true,
+                hasAngle : true,
+                hasSubTitle : false,
+                multiLine : 1,
+                hasCheckbox : false,
+                align : 'left'
+            });
+            lv1.set(listData);
+        }
+    </script>
+</html>

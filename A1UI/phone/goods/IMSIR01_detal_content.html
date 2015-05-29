@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="IMSIR01_detal_content/css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver">
+            <div class=" umar-at1">
+                <div id="listview1"  class="ubt bc-border c-wh">
+
+                </div>
+                <div id="listview2"  class="ubt bc-border ubb c-wh umar-at1 uinn-a7">
+
+                </div>
+
+            </div>
+            <div id="listview3"  class="ubt ubb bc-border c-wh umar-at1 uinn-a7">
+
+            </div>
+            <div  id="listview4"  class="ubt ubb bc-border c-wh umar-at1 uinn-a7">
+
+            </div>
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var lv1 = appcan.listview({
+            selector : "#listview1",
+            type : "thickLine",
+            hasIcon : true,
+            hasAngle : false,
+            hasSubTitle : false,
+            multiLine : 1
+        });
+       
+        lv1.set(JSON.parse(localStorage.getItem('topList')));
+        var lv2 = appcan.listview({
+            selector : "#listview2",
+            type : "thinLine",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : true,
+            multiLine : 1
+        });
+        lv2.set(JSON.parse(localStorage.getItem('midList')));
+        var lv3 = appcan.listview({
+            selector : "#listview3",
+            type : "thinLine",
+            hasIcon : false,
+            hasSubTitle : true,
+            hasAngle : false,
+            multiLine : 1
+        });
+        lv3.set(JSON.parse(localStorage.getItem('butList')));
+        
+    </script>
+</html>

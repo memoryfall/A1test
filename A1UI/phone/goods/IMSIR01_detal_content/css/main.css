@@ -1,0 +1,70 @@
+.myImg1{
+	background-image:url('myImg/myImg1.png');
+}
+.myImg2{
+	background-image:url('myImg/myImg2.png');
+}
+.myImg3{
+	background-image:url('myImg/myImg3.png');
+}
+.myImg4{
+	background-image:url('myImg/myImg4.png');
+}
+.myImg5{
+	background-image:url('myImg/myImg5.png');
+}
+.myImg6{
+	background-image:url('myImg/myImg6.png');
+}
+.umar-FP1{
+	margin:0 1.25em;
+}
+.umar-r-FP1{
+	margin-right:1.25em;
+}
+.umar-r-FP2{
+	margin-right:0.75em;
+}
+.uinn-FP1{
+	padding:0.625em 0;
+}
+.uwh-FP1{
+	width:1.3125em;
+	height:1.3125em;
+}
+.uwh-FP2{
+	width:3.6em;
+	height:1.8em;
+}
+.t-gra-FP1{
+	color:#c2c2c2;
+}
+.uc-a-FP1 {
+	-webkit-border-radius: 0.9em;
+	border-radius: 0.9em;
+}
+.uinn3
+{
+	padding:0.2em;
+}
+.t-gra6{
+	color:#c2c2c2;
+}
+.umar-ar3{
+    margin-right:0.5em;
+}
+.umar-at1{
+    margin-top:0.625em;
+}
+.c-wh{
+    background-color: white;
+}
+.uinn-a11{
+    padding:0.625em 0;
+}
+.uinn-a7{
+    padding:0 0.625em;
+}
+.ufm1{
+    font-family:Arial;
+}
