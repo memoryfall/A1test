@@ -17,13 +17,13 @@
             <div class="ub-b1 ub-fh " style="background-color:rgba(0,0,0,0);"  onclick="closeP();"></div>
             <div class="uabs-oa uw-oa6">
                 <div class="c-bla-60 uinn-10">
-                    <div data-index='4' class="link ulev-1 ubb uinn-16 tx-c bc-text-head" ontouchstart="appcan.touch()" onclick="closeP();">
+                    <div data-index='4' class="link btn ubb ub ub-ac bc-text-head ub-pc">
                         客
                     </div>
-                    <div data-index='5' class="link ulev-1 ubb uinn-16 tx-c bc-text-head" ontouchstart="appcan.touch()" onclick="closeP();">
+                    <div data-index='5' class="link btn ubb ub ub-ac bc-text-head ub-pc">
                         售
                     </div>
-                    <div data-index='6' class="link ulev-1 uinn-16 tx-c bc-text-head" ontouchstart="appcan.touch()" onclick="closeP();">
+                    <div data-index='6' class="link btn ub ub-ac bc-text-head ub-pc">
                         帐
                     </div>
                 </div><div class="triangle3 ub-pe umar-l-oa"></div>
@@ -34,10 +34,11 @@
     </body>
     <script>
         appcan.ready(function() {
-            appcan.initBounce();
+            // appcan.initBounce();
         })
-        appcan.button(".link", "btn-act", function() {
+        appcan.button(".link", "ani-act", function() {
             appcan.window.publish("frame_open", $(this).data("index"));
+            closeP();
         })
         function closeP() {
             appcan.execScriptInWin('index', 'closePop()');

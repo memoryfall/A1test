@@ -87,12 +87,7 @@
         }
 
         appcan.button(".link1", "btn-act", function() {
-            appcan.window.close(-1);
-            appcan.window.evaluateScript({
-                name : 'index',
-                scriptContent : 'appcan.window.close(-1)'
-            });
-            appcan.window.open('index', 'index.html', 0, 256);
+            appcan.window.publish("main_window_fresh","");
         })
         appcan.button(".link2", "btn-act", function() {
             appcan.window.open($(this).data("name"), $(this).data("url"), 10);

@@ -40,11 +40,7 @@
                     localStorage.setItem("UserId",data.Data.UserId);
                     localStorage.setItem("RoleId",data.Data.RoleId);
                     appcan.window.close(-1);
-                    appcan.window.open({
-                        name:'index',
-                        data:'index.html',
-                        aniId:2
-                    })
+                    appcan.window.publish("main_window_fresh","");
                 }else{
                     alert("输入的信息有误,请核对!");
                 }
